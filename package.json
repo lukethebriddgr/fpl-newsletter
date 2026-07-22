@@ -1,0 +1,13 @@
+{
+  "name": "fpl-newsletter",
+  "version": "1.0.0",
+  "description": "Deterministic Fantasy Premier League data fetch + ranking engine that produces a weekly digest.json for an AI-composed newsletter.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "analyze": "node analyze.js"
+  },
+  "license": "MIT"
+}
