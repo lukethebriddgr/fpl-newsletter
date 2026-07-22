@@ -2,6 +2,7 @@
 // Reads digest.json + METHODOLOGY.md, asks Claude to compose per the methodology,
 // writes newsletter.html. Zero deps (built-in fetch). Needs ANTHROPIC_API_KEY.
 
+import "./load-env.js";
 import { readFile, writeFile } from "node:fs/promises";
 
 const MODEL = process.env.NEWSLETTER_MODEL || "claude-sonnet-5";

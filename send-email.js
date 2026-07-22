@@ -1,6 +1,7 @@
 // send-email.js — emails newsletter.html via Gmail SMTP (app password).
 // Env: GMAIL_ADDRESS, GMAIL_APP_PASSWORD, RECIPIENT (optional; defaults to GMAIL_ADDRESS).
 
+import "./load-env.js";
 import { readFile } from "node:fs/promises";
 import nodemailer from "nodemailer";
 

@@ -3,5 +3,8 @@ node_modules/
 *.log
 .DS_Store
 
+# Secrets live ONLY here, and this file is never committed.
+.env
+
 # digest.json IS committed on purpose: the GitHub Actions workflow regenerates it
 # weekly and the cloud routine reads it (the routine's sandbox can't reach the FPL API).
