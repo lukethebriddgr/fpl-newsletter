@@ -1,0 +1,68 @@
+name: FPL Newsletter
+
+# Full weekly pipeline, entirely on GitHub-hosted runners (open internet, visible logs):
+#   fetch FPL data -> compose newsletter with Claude -> email via Gmail SMTP.
+# Runs Tuesday 07:00 UTC. Use "Run workflow" (workflow_dispatch) to test on demand.
+
+on:
+  schedule:
+    - cron: "0 7 * * 2" # Tuesday 07:00 UTC (~7-8am UK)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fpl-newsletter
+  cancel-in-progress: false
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Generate digest.json (FPL API)
+        run: node analyze.js 1899953
+
+      - name: Compose newsletter (Claude API)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NEWSLETTER_MODEL: claude-sonnet-5
+        run: node compose.js
+
+      - name: Email newsletter (Gmail SMTP)
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT: ${{ secrets.RECIPIENT }}
+        run: node send-email.js
+
+      - name: Upload newsletter as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter-html
+          path: newsletter.html
+          if-no-files-found: warn
+
+      - name: Commit refreshed digest.json
+        run: |
+          git config user.name "fpl-digest-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add digest.json
+          if git diff --staged --quiet; then
+            echo "digest.json unchanged."
+          else
+            git commit -m "chore: refresh digest.json [skip ci]"
+            git push
+          fi

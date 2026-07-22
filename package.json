@@ -7,7 +7,12 @@
     "node": ">=18"
   },
   "scripts": {
-    "analyze": "node analyze.js"
+    "analyze": "node analyze.js",
+    "compose": "node compose.js",
+    "send": "node send-email.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
   },
   "license": "MIT"
 }
