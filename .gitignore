@@ -1,5 +1,7 @@
 node_modules/
 .cache/
-digest.json
 *.log
 .DS_Store
+
+# digest.json IS committed on purpose: the GitHub Actions workflow regenerates it
+# weekly and the cloud routine reads it (the routine's sandbox can't reach the FPL API).
