@@ -56,6 +56,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Commit refreshed digest.json
+        continue-on-error: true # archival only; never fail the run (or the email) over this
         run: |
           git config user.name "fpl-digest-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
