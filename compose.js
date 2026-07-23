@@ -1,7 +1,8 @@
-// compose.js — asks Claude for STRUCTURED newsletter content (JSON matching the
-// contract in METHODOLOGY.md), then hands it to render.js which owns all HTML.
-// If the API call or JSON parse fails, falls back to a deterministic build so an
-// email always goes out. Zero deps (built-in fetch). Needs ANTHROPIC_API_KEY.
+// compose.js — asks Claude for STRUCTURED newsletter content via a forced tool
+// call (tool_use.input is returned pre-parsed, so there is no fragile JSON.parse
+// of model text — this fixes the "unescaped quote" failures). render.js then owns
+// all HTML. If the API call fails, falls back to a deterministic build so an email
+// always goes out. Zero deps (built-in fetch). Needs ANTHROPIC_API_KEY.
 
 import "./load-env.js";
 import { readFile, writeFile } from "node:fs/promises";
@@ -13,19 +14,107 @@ const API_KEY = process.env.ANTHROPIC_API_KEY;
 const digest = JSON.parse(await readFile("digest.json", "utf8"));
 const methodology = await readFile("METHODOLOGY.md", "utf8");
 
+// Tool schema describing the newsletter content contract. Non-strict: the model
+// fills only the fields relevant to each section's `type`.
+const NEWSLETTER_TOOL = {
+  name: "emit_newsletter",
+  description:
+    "Emit the finished FPL newsletter as structured content. Follow METHODOLOGY.md exactly. " +
+    "Every player is referenced by the numeric id from digest.playerIndex / the section arrays. " +
+    "Only use stats present in digest.json.",
+  input_schema: {
+    type: "object",
+    properties: {
+      subject: { type: "string", description: "Email subject line" },
+      intro: { type: "string", description: "1-2 sentence bottom-line / headline" },
+      checklist: { type: "string", description: "Short 'before the deadline' line" },
+      sections: {
+        type: "array",
+        description: "Ordered newsletter sections",
+        items: {
+          type: "object",
+          properties: {
+            type: {
+              type: "string",
+              enum: ["snapshot", "players", "recommendations", "roadmap", "watch", "prose"],
+            },
+            heading: { type: "string" },
+            subheading: { type: "string" },
+            summary: { type: "string" },
+            stats: {
+              type: "array",
+              items: {
+                type: "object",
+                properties: { label: { type: "string" }, value: { type: "string" } },
+              },
+            },
+            groups: {
+              type: "array",
+              items: {
+                type: "object",
+                properties: {
+                  label: { type: "string" },
+                  players: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        id: { type: "integer" },
+                        stat: { type: "string" },
+                        note: { type: "string" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+            items: {
+              type: "array",
+              items: {
+                type: "object",
+                properties: {
+                  rank: { type: "integer" },
+                  move: { type: "string" },
+                  why: { type: "string" },
+                  playerIds: { type: "array", items: { type: "integer" } },
+                },
+              },
+            },
+            steps: {
+              type: "array",
+              items: {
+                type: "object",
+                properties: { when: { type: "string" }, action: { type: "string" } },
+              },
+            },
+            risers: {
+              type: "array",
+              items: { type: "object", properties: { id: { type: "integer" }, note: { type: "string" } } },
+            },
+            fallers: {
+              type: "array",
+              items: { type: "object", properties: { id: { type: "integer" }, note: { type: "string" } } },
+            },
+            paragraphs: { type: "array", items: { type: "string" } },
+            bullets: { type: "array", items: { type: "string" } },
+          },
+          required: ["type"],
+        },
+      },
+    },
+    required: ["subject", "intro", "sections"],
+  },
+};
+
 async function composeContent() {
   if (!API_KEY) throw new Error("ANTHROPIC_API_KEY is not set");
 
   const system = `${methodology}
 
 ---
-OUTPUT CONTRACT (overrides any other formatting note):
-- Return ONE JSON object ONLY — matching the content schema in this document.
-- No markdown, no code fences, no commentary before or after. Start with { and end with }.
-- Every player reference is the numeric "id" from digest.playerIndex / the section arrays.
-- Never invent stats; use only values present in digest.json. Omit any section that has no data.`;
+Call the emit_newsletter tool exactly once with the finished content. Do not write any prose outside the tool call.`;
 
-  const user = `Here is this week's digest.json. Produce the newsletter content JSON now.
+  const user = `Here is this week's digest.json. Compose the newsletter and emit it via the tool.
 
 \`\`\`json
 ${JSON.stringify(digest)}
@@ -40,8 +129,11 @@ ${JSON.stringify(digest)}
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 4500,
+      max_tokens: 5000,
+      thinking: { type: "disabled" }, // structured composition; keep it fast + within budget
       system,
+      tools: [NEWSLETTER_TOOL],
+      tool_choice: { type: "tool", name: "emit_newsletter" },
       messages: [{ role: "user", content: user }],
     }),
   });
@@ -49,19 +141,13 @@ ${JSON.stringify(digest)}
   if (!res.ok) throw new Error(`Claude API HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
 
   const data = await res.json();
-  let txt = (data.content || [])
-    .filter((b) => b.type === "text")
-    .map((b) => b.text)
-    .join("")
-    .trim();
-  txt = txt.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "").trim();
-  const first = txt.indexOf("{");
-  const last = txt.lastIndexOf("}");
-  if (first >= 0 && last > first) txt = txt.slice(first, last + 1);
-
-  const content = JSON.parse(txt);
-  if (!content || !Array.isArray(content.sections) || content.sections.length === 0) {
-    throw new Error("parsed content has no sections");
+  const toolBlock = (data.content || []).find((b) => b.type === "tool_use");
+  if (!toolBlock || !toolBlock.input) {
+    throw new Error(`no tool_use in response (stop_reason=${data.stop_reason})`);
+  }
+  const content = toolBlock.input; // already a parsed object — no JSON.parse
+  if (!Array.isArray(content.sections) || content.sections.length === 0) {
+    throw new Error("tool input has no sections");
   }
   return content;
 }
