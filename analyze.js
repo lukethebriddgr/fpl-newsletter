@@ -70,6 +70,13 @@ async function main() {
 
   const priceWatch = buildPriceWatch(bootstrap.elements, teams);
 
+  // --- Player image/index (for the renderer's photos + badges) -------------
+  const playerIndex = buildPlayerIndex(
+    { bestOfWeek, consistentPerformers, valuePicks, priceWatch, manager },
+    players,
+    teams
+  );
+
   const digest = {
     meta: {
       generatedAt: new Date().toISOString(),
@@ -94,6 +101,7 @@ async function main() {
     fixtureRuns,
     valuePicks,
     priceWatch,
+    playerIndex,
   };
 
   const outPath = path.join(__dirname, "digest.json");
@@ -407,6 +415,42 @@ function presentWeekly(r, p, teams) {
 
 function positionId(short) {
   return { GKP: 1, DEF: 2, MID: 3, FWD: 4 }[short];
+}
+
+// Compact lookup for every player referenced anywhere in the digest, so the
+// renderer can draw photos/badges without carrying image fields on every object.
+function buildPlayerIndex(sections, players, teams) {
+  const ids = new Set();
+  const add = (arr) => (arr || []).forEach((p) => p && p.id != null && ids.add(p.id));
+  const b = sections.bestOfWeek || {};
+  ["GKP", "DEF", "MID", "FWD"].forEach((k) => add(b[k]));
+  add(sections.consistentPerformers);
+  add(sections.valuePicks?.byPointsPerM);
+  add(sections.valuePicks?.byXgiPerM);
+  add(sections.priceWatch?.risers);
+  add(sections.priceWatch?.fallers);
+  if (sections.manager?.squad) {
+    add(sections.manager.squad);
+    (sections.manager.upgradeSuggestions || []).forEach((s) => {
+      if (s.out?.id != null) ids.add(s.out.id);
+      add(s.in);
+    });
+  }
+  const index = {};
+  for (const id of ids) {
+    const p = players.get(id);
+    if (!p) continue;
+    const team = teams.get(p.team);
+    index[id] = {
+      name: p.web_name,
+      code: p.code, // -> players/250x250/p{code}.png
+      teamShort: team?.short_name,
+      teamCode: team?.code, // -> badges/t{teamCode}.png
+      position: POS[p.element_type],
+      price: round(p.now_cost / 10, 1),
+    };
+  }
+  return index;
 }
 
 function indexBy(arr, key) {

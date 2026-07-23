@@ -8,3 +8,6 @@ node_modules/
 
 # digest.json IS committed on purpose: the GitHub Actions workflow regenerates it
 # weekly and the cloud routine reads it (the routine's sandbox can't reach the FPL API).
+
+# build artifact (regenerated each run, uploaded as an Actions artifact)
+newsletter.html

@@ -1,71 +1,82 @@
-// compose.js — turns digest.json into a finished HTML newsletter via the Claude API.
-// Reads digest.json + METHODOLOGY.md, asks Claude to compose per the methodology,
-// writes newsletter.html. Zero deps (built-in fetch). Needs ANTHROPIC_API_KEY.
+// compose.js — asks Claude for STRUCTURED newsletter content (JSON matching the
+// contract in METHODOLOGY.md), then hands it to render.js which owns all HTML.
+// If the API call or JSON parse fails, falls back to a deterministic build so an
+// email always goes out. Zero deps (built-in fetch). Needs ANTHROPIC_API_KEY.
 
 import "./load-env.js";
 import { readFile, writeFile } from "node:fs/promises";
+import { renderNewsletter, buildFallbackContent } from "./render.js";
 
 const MODEL = process.env.NEWSLETTER_MODEL || "claude-sonnet-5";
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
-if (!API_KEY) {
-  console.error("compose.js: ANTHROPIC_API_KEY is not set.");
-  process.exit(1);
-}
-
-const digestRaw = await readFile("digest.json", "utf8");
+const digest = JSON.parse(await readFile("digest.json", "utf8"));
 const methodology = await readFile("METHODOLOGY.md", "utf8");
 
-const system = `${methodology}
+async function composeContent() {
+  if (!API_KEY) throw new Error("ANTHROPIC_API_KEY is not set");
+
+  const system = `${methodology}
 
 ---
-OUTPUT CONTRACT (overrides any formatting note above):
-- Output ONE complete, self-contained HTML document and NOTHING else.
-- Start at <!DOCTYPE html>. No markdown, no code fences, no preamble, no sign-off outside the HTML.
-- Inline all CSS. No external assets, scripts, or web fonts. Mobile-friendly and readable in an email client.
-- Every statistic MUST come from the provided digest.json. Never invent numbers or fixtures.`;
+OUTPUT CONTRACT (overrides any other formatting note):
+- Return ONE JSON object ONLY — matching the content schema in this document.
+- No markdown, no code fences, no commentary before or after. Start with { and end with }.
+- Every player reference is the numeric "id" from digest.playerIndex / the section arrays.
+- Never invent stats; use only values present in digest.json. Omit any section that has no data.`;
 
-const userContent = `Here is this week's digest.json. Compose the newsletter now, following METHODOLOGY.md exactly, and return only the HTML document.
+  const user = `Here is this week's digest.json. Produce the newsletter content JSON now.
 
 \`\`\`json
-${digestRaw}
+${JSON.stringify(digest)}
 \`\`\``;
 
-const res = await fetch("https://api.anthropic.com/v1/messages", {
-  method: "POST",
-  headers: {
-    "x-api-key": API_KEY,
-    "anthropic-version": "2023-06-01",
-    "content-type": "application/json",
-  },
-  body: JSON.stringify({
-    model: MODEL,
-    max_tokens: 8000,
-    system,
-    messages: [{ role: "user", content: userContent }],
-  }),
-});
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": API_KEY,
+      "anthropic-version": "2023-06-01",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 4500,
+      system,
+      messages: [{ role: "user", content: user }],
+    }),
+  });
 
-if (!res.ok) {
-  const body = await res.text();
-  console.error(`compose.js: Claude API HTTP ${res.status}\n${body}`);
-  process.exit(1);
+  if (!res.ok) throw new Error(`Claude API HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
+
+  const data = await res.json();
+  let txt = (data.content || [])
+    .filter((b) => b.type === "text")
+    .map((b) => b.text)
+    .join("")
+    .trim();
+  txt = txt.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "").trim();
+  const first = txt.indexOf("{");
+  const last = txt.lastIndexOf("}");
+  if (first >= 0 && last > first) txt = txt.slice(first, last + 1);
+
+  const content = JSON.parse(txt);
+  if (!content || !Array.isArray(content.sections) || content.sections.length === 0) {
+    throw new Error("parsed content has no sections");
+  }
+  return content;
 }
 
-const data = await res.json();
-let html = (data.content || [])
-  .filter((b) => b.type === "text")
-  .map((b) => b.text)
-  .join("")
-  .trim();
-
-// Safety net: strip accidental markdown fences if the model wraps the HTML.
-html = html.replace(/^```(?:html)?\s*/i, "").replace(/\s*```$/i, "").trim();
-
-if (!/^<!doctype html/i.test(html) && !/^<html/i.test(html)) {
-  console.error("compose.js: model did not return an HTML document. First 300 chars:\n" + html.slice(0, 300));
-  process.exit(1);
+let content;
+let source;
+try {
+  content = await composeContent();
+  source = `AI (${MODEL})`;
+} catch (err) {
+  console.error(`compose.js: AI compose failed → deterministic fallback.\n  reason: ${err.message}`);
+  content = buildFallbackContent(digest);
+  source = "fallback";
 }
 
+const html = renderNewsletter(content, digest);
 await writeFile("newsletter.html", html);
-console.log(`compose.js: newsletter.html written (${html.length} chars) using ${MODEL}.`);
+console.log(`compose.js: newsletter.html written (${html.length} chars) via ${source}, ${content.sections.length} sections.`);

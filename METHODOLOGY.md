@@ -1,103 +1,96 @@
-# FPL Weekly Newsletter — Composition Methodology
+# FPL Brief — Composition Methodology (v2)
 
-This document is the **instruction set for the AI** that composes the weekly newsletter.
-The deterministic script (`analyze.js`) produces `digest.json` with the numbers; your job is
-the **strategy and the prose**. Read `digest.json` in full, then write the email exactly as
-specified below.
+You turn `digest.json` (the numbers) into **structured newsletter content** (JSON).
+`render.js` owns all the HTML/design — you own the **analysis and the words**.
 
 **Prime directive: maximise total points over the whole season, not any single gameweek.**
-A move that gains +2 this week but costs flexibility later is often worse than doing nothing.
+
+**Voice:** sharp, confident, a little wry — like a clued-up mate who does the homework.
+Every line earns its place. Lead with the "so what". No hedging, no filler, no restating the
+obvious. Short sentences. This is a brief, not an essay.
+
+**Hard rules:**
+- Use only numbers present in `digest.json`. Never invent stats, fixtures, or prices.
+- Reference every player by their numeric `id` (from the section arrays / `digest.playerIndex`).
+- If a section has no data (e.g. fixtures pre-season), **omit it** — don't pad.
+- Keep every `note` to ONE punchy line. Keep `stat` to a tiny label (a pill), e.g. `xGI 0.9 · 12 pts`.
 
 ---
 
-## How to read `digest.json`
+## Output: a single JSON object
 
-- `meta` — season state. If `seasonState` is `ended` or `preseason`, say so plainly at the top
-  and skip/'coming soon' the fixture-run, chip-roadmap, and price-timing sections (they have no
-  data). Only run the full newsletter when `seasonState === "in_season"`.
-- `manager` — the reader's squad, value, bank, chips, and script-suggested upgrades. `null` if no
-  manager ID was supplied.
-- `bestOfWeek` — per-position underlying leaders for the completed GW (already top-3).
-- `consistentPerformers` — season/rolling reliability leaders.
-- `fixtureRuns` — upcoming difficulty swings, doubles, blanks.
-- `valuePicks`, `priceWatch` — value and transfer-momentum tables.
+```json
+{
+  "subject": "FPL Brief — GW12",
+  "intro": "One-to-two sentence bottom line: the single headline call + chip status.",
+  "checklist": "short 'before the deadline' line",
+  "sections": [ /* ordered; each has a "type" from below */ ]
+}
+```
 
-**Never invent numbers.** Every stat you cite must come from `digest.json`. If a section is empty,
-say why (using `meta.note`), don't fabricate.
+### Section types
 
----
+**snapshot** — the reader's team (in-season only).
+```json
+{ "type":"snapshot", "heading":"Team name", "subheading":"rank · pts",
+  "summary":"one line on value/bank/free transfers",
+  "stats":[{"label":"Total","value":"1,234"},{"label":"Rank","value":"250k"}] }
+```
 
-## Newsletter structure (compose in this order)
+**players** — best-of-week, consistent performers, value picks (image cards).
+```json
+{ "type":"players", "heading":"Best of GW12", "subheading":"by underlying data, not points",
+  "groups":[ {"label":"DEF","players":[ {"id":123,"stat":"xGI 0.8 · 9 pts","note":"one-line read"} ]} ] }
+```
+Use `digest.bestOfWeek` (DEF/MID/FWD), `digest.consistentPerformers`, `digest.valuePicks`. Call out
+players whose **underlying score was high but points low** (a returns-timebomb) and lucky returns
+likely to regress.
 
-### 1. Team snapshot
-One tight paragraph: overall rank, total points, last-GW score, squad value, bank, estimated free
-transfers (`manager.freeTransfersEstimate` — flag it's an estimate), chips remaining. Set the scene.
+**recommendations** — the heart of the email. Exactly THREE prioritised moves for the reader's squad.
+```json
+{ "type":"recommendations", "heading":"Your top 3 moves",
+  "items":[ {"rank":1,"move":"Bank the transfer","why":"data reason + season-long upside","playerIds":[]} ] }
+```
+- **Inaction/banking is a valid — often the best — lead call.** If the best single transfer gains
+  < ~1 pt/week, recommend rolling to set up a bigger double move.
+- Only endorse a **−4 hit** when the multi-week gain clearly beats 4 (show the maths).
+- Prefer moves that also improve fixture run and price trajectory. Never churn for its own sake.
+- Use `digest.manager.squad` + `digest.manager.upgradeSuggestions` as inputs, not gospel.
 
-### 2. Best players of the week — 3 per position
-For DEF, MID, FWD (and a 1–2 keeper bonus), list the top 3 from `bestOfWeek`. For each, show the
-underlying line: **xG, xA, xGI, threat/creativity, ICT, minutes, and actual points**. Add a one-line
-read. Call out players whose **underlying score was high but points were low** ("bought a lottery
-ticket that will pay off") and vice-versa (flag lucky returns that may regress).
+**roadmap** — multi-week transfer + chip plan (in-season, when fixtures exist).
+```json
+{ "type":"roadmap", "heading":"Transfer & chip roadmap",
+  "steps":[ {"when":"GW13","action":"..."},{"when":"BB","action":"target the DGW"} ] }
+```
+Map each remaining chip to its highest-haul moment (Bench Boost→DGW, Triple Captain→premium in a
+double/dream fixture, Free Hit→blank or big double, Wildcard→ahead of a good-fixture swing). Tie to
+`digest.fixtureRuns` doubles/blanks.
 
-### 3. Consistent performers
-The week-in, week-out reliable names from `consistentPerformers`. Emphasise **floor** (mean points,
-low CV), **nailed minutes** (`minutesReliability`), and **repeatable threat** (`xgiPer90`). These are
-the players to build around, distinct from one-week wonders.
+**watch** — price & transfer timing.
+```json
+{ "type":"watch", "heading":"Price & transfer watch", "subheading":"momentum, not certainty",
+  "risers":[{"id":123,"note":"do the move before tonight's ~01:30 update"}],
+  "fallers":[{"id":456,"note":"selling? act before it drops"}] }
+```
+Use `digest.priceWatch`. **Separate price from strategy** — never take a −4 just to chase a rise;
+price timing only decides *when* to make a move you already wanted.
 
-### 4. Fixture runs
-From `fixtureRuns`: the best upcoming runs to target (low `avgDifficulty`) and worst to avoid/sell.
-Explicitly flag **double gameweeks** and **blank gameweeks** — they drive chip timing (section 6).
-
-### 5. Your top 3 recommendations
-The heart of the email. Using `manager.squad`, `manager.upgradeSuggestions`, and everything above,
-give **exactly three** prioritised recommendations tailored to the reader's squad. For each: the move,
-the data reason, and the expected **season-long** upside.
-
-**Inaction is a valid — often the best — recommendation.** Apply this logic explicitly:
-- If the best available single transfer projects a **marginal** gain (< ~1 pt/week over the horizon),
-  recommend **banking** the transfer. Rolling gives 2 FTs next week, which unlocks a bigger combined
-  upgrade or the flexibility to react to news/price/injuries.
-- Only recommend a **−4 hit** when the projected multi-week gain clearly exceeds 4 points (state the
-  maths: e.g. "≈ +2.5/wk over 5 weeks = +12.5, comfortably beats the −4").
-- Prefer moves that also improve **fixture run** and **price trajectory**, not just raw form.
-- Never churn for the sake of it. "Hold, bank the FT, reassess after the next round of team news" is a
-  legitimate lead recommendation when that's what the data supports.
-
-### 6. Transfer + chip roadmap
-A forward-looking multi-week plan (next ~4–8 GWs), not just this week:
-- Map each remaining chip to the moment of **highest expected haul**:
-  - **Bench Boost** → a double gameweek where the whole 15 plays strong fixtures.
-  - **Triple Captain** → a premium asset with a double or a dream single fixture.
-  - **Free Hit** → a blank gameweek (navigate it) or a big double you're not set up for.
-  - **Wildcard** → ahead of a sustained good-fixture swing for your core, or to fix a broken team
-    structure before a fixture run — not reactively.
-- Sketch a **transfer sequence**: which positions to strengthen over the next few weeks, and how
-  banking now sets up a double move later. Tie it to `fixtureRuns` doubles/blanks.
-- State assumptions and note where a decision should wait for team news.
-
-### 7. Price & transfer-timing watch
-From `priceWatch` and the reader's shortlist:
-- Flag squad/target players **near a rise** ("if you're committed to this move, do it before tonight's
-  ~01:30 UK price update to lock the lower price / bank a rise") vs **near a drop** ("selling? act
-  before it falls and costs you value"; "buying a faller? you can wait").
-- **Crucially, separate price from strategy:** never take a −4 or a bad transfer just to chase a
-  price rise. Price timing optimises *when* to execute a move you were already going to make.
-- Always caveat that price prediction is a **momentum approximation**, not a guarantee.
+**prose** — news, notes, or anything free-form (used heavily by the pre-season news digest).
+```json
+{ "type":"prose", "heading":"...", "subheading":"...", "paragraphs":["..."], "bullets":["..."] }
+```
 
 ---
 
-## Tone & format
-- Knowledgeable FPL-manager voice — confident, concise, a little wry. No filler, no hedging padding.
-- Clean, mobile-friendly **HTML email**: clear section headers, compact stat tables, scannable
-  bullets, bold the key numbers. Keep it skimmable in 2–3 minutes with depth on tap.
-- Lead the email with a 2–3 sentence **TL;DR**: the single headline recommendation + chip status.
-- End with a one-line **"do this before the deadline"** checklist.
-- If the Gmail send tool only accepts plain text/markdown, degrade gracefully to clean structured
-  text — content over styling.
+## Section order
+1. `snapshot` (if a manager squad exists)
+2. `players` — Best of the week
+3. `players` — Consistent performers
+4. `recommendations` — your top 3
+5. `roadmap` (in-season only)
+6. `watch` (in-season only)
+Add a short `prose` "Note" if `digest.meta.note` explains an empty/edge state.
 
-## Guardrails
-- Season-long EV over weekly noise, always.
-- Small samples are noisy: prefer players with real minutes and repeatable underlying numbers over
-  one-week spikes.
-- Be honest about uncertainty (price predictions, FT estimate, rotation risk, `chance_of_playing`).
-- Recommend the **least action** that captures the upside. Banking and patience are strategies.
+## Season awareness
+Check `digest.meta.seasonState`. If `ended`/`preseason`: keep snapshot + best-of-week + consistent +
+value; **omit** roadmap/watch (no data); open `intro` by noting fixtures/chips/prices resume at kickoff.

@@ -1395,5 +1395,311 @@
     "note": "Momentum approximation from public net transfers — directional, not the exact FPL threshold. Prices change ~01:30 UK daily.",
     "risers": [],
     "fallers": []
+  },
+  "playerIndex": {
+    "1": {
+      "name": "Raya",
+      "code": 154561,
+      "teamShort": "ARS",
+      "teamCode": 3,
+      "position": "GKP",
+      "price": 6.2
+    },
+    "5": {
+      "name": "Gabriel",
+      "code": 226597,
+      "teamShort": "ARS",
+      "teamCode": 3,
+      "position": "DEF",
+      "price": 7.3
+    },
+    "20": {
+      "name": "Trossard",
+      "code": 116216,
+      "teamShort": "ARS",
+      "teamCode": 3,
+      "position": "MID",
+      "price": 6.6
+    },
+    "31": {
+      "name": "G.Jesus",
+      "code": 205651,
+      "teamShort": "ARS",
+      "teamCode": 3,
+      "position": "FWD",
+      "price": 6.4
+    },
+    "64": {
+      "name": "Watkins",
+      "code": 178301,
+      "teamShort": "AVL",
+      "teamCode": 7,
+      "position": "FWD",
+      "price": 8.7
+    },
+    "72": {
+      "name": "Senesi",
+      "code": 221466,
+      "teamShort": "BOU",
+      "teamCode": 91,
+      "position": "DEF",
+      "price": 5.2
+    },
+    "74": {
+      "name": "Truffert",
+      "code": 494521,
+      "teamShort": "BOU",
+      "teamCode": 91,
+      "position": "DEF",
+      "price": 4.8
+    },
+    "100": {
+      "name": "Kroupi.Jr",
+      "code": 560262,
+      "teamShort": "BOU",
+      "teamCode": 91,
+      "position": "FWD",
+      "price": 4.7
+    },
+    "119": {
+      "name": "Mbeumo",
+      "code": 446008,
+      "teamShort": "MUN",
+      "teamCode": 1,
+      "position": "MID",
+      "price": 8.3
+    },
+    "136": {
+      "name": "Thiago",
+      "code": 502500,
+      "teamShort": "BRE",
+      "teamCode": 94,
+      "position": "FWD",
+      "price": 7.2
+    },
+    "148": {
+      "name": "F.Kadıoğlu",
+      "code": 231416,
+      "teamShort": "BHA",
+      "teamCode": 36,
+      "position": "DEF",
+      "price": 4.5
+    },
+    "151": {
+      "name": "Van Hecke",
+      "code": 469142,
+      "teamShort": "BHA",
+      "teamCode": 36,
+      "position": "DEF",
+      "price": 4.7
+    },
+    "163": {
+      "name": "Hinshelwood",
+      "code": 532529,
+      "teamShort": "BHA",
+      "teamCode": 36,
+      "position": "MID",
+      "price": 5.2
+    },
+    "242": {
+      "name": "Dewsbury-Hall",
+      "code": 215413,
+      "teamShort": "EVE",
+      "teamCode": 11,
+      "position": "MID",
+      "price": 5.3
+    },
+    "256": {
+      "name": "Muñoz",
+      "code": 247348,
+      "teamShort": "CRY",
+      "teamCode": 31,
+      "position": "DEF",
+      "price": 5.9
+    },
+    "260": {
+      "name": "Guéhi",
+      "code": 209036,
+      "teamShort": "MCI",
+      "teamCode": 43,
+      "position": "DEF",
+      "price": 5.1
+    },
+    "303": {
+      "name": "Garner",
+      "code": 232928,
+      "teamShort": "EVE",
+      "teamCode": 11,
+      "position": "MID",
+      "price": 5.2
+    },
+    "314": {
+      "name": "Leno",
+      "code": 80201,
+      "teamShort": "FUL",
+      "teamCode": 54,
+      "position": "GKP",
+      "price": 5
+    },
+    "320": {
+      "name": "Diop",
+      "code": 219924,
+      "teamShort": "FUL",
+      "teamCode": 54,
+      "position": "DEF",
+      "price": 4.3
+    },
+    "373": {
+      "name": "Virgil",
+      "code": 97032,
+      "teamShort": "LIV",
+      "teamCode": 14,
+      "position": "DEF",
+      "price": 6.1
+    },
+    "387": {
+      "name": "Szoboszlai",
+      "code": 424876,
+      "teamShort": "LIV",
+      "teamCode": 14,
+      "position": "MID",
+      "price": 7.1
+    },
+    "411": {
+      "name": "O'Reilly",
+      "code": 472769,
+      "teamShort": "MCI",
+      "teamCode": 43,
+      "position": "DEF",
+      "price": 5.3
+    },
+    "430": {
+      "name": "Haaland",
+      "code": 223094,
+      "teamShort": "MCI",
+      "teamCode": 43,
+      "position": "FWD",
+      "price": 14.7
+    },
+    "441": {
+      "name": "Dorgu",
+      "code": 596777,
+      "teamShort": "MUN",
+      "teamCode": 1,
+      "position": "DEF",
+      "price": 4.1
+    },
+    "449": {
+      "name": "B.Fernandes",
+      "code": 141746,
+      "teamShort": "MUN",
+      "teamCode": 1,
+      "position": "MID",
+      "price": 10.4
+    },
+    "452": {
+      "name": "Amad",
+      "code": 493250,
+      "teamShort": "MUN",
+      "teamCode": 1,
+      "position": "MID",
+      "price": 6.2
+    },
+    "500": {
+      "name": "Osula",
+      "code": 538207,
+      "teamShort": "NEW",
+      "teamCode": 4,
+      "position": "FWD",
+      "price": 5.5
+    },
+    "515": {
+      "name": "Gibbs-White",
+      "code": 222531,
+      "teamShort": "NFO",
+      "teamCode": 17,
+      "position": "MID",
+      "price": 7.6
+    },
+    "517": {
+      "name": "Anderson",
+      "code": 215379,
+      "teamShort": "NFO",
+      "teamCode": 17,
+      "position": "MID",
+      "price": 5.7
+    },
+    "547": {
+      "name": "E.Le Fée",
+      "code": 484420,
+      "teamShort": "SUN",
+      "teamCode": 56,
+      "position": "MID",
+      "price": 4.8
+    },
+    "606": {
+      "name": "Mavropanos",
+      "code": 233963,
+      "teamShort": "WHU",
+      "teamCode": 21,
+      "position": "DEF",
+      "price": 4.5
+    },
+    "624": {
+      "name": "Bowen",
+      "code": 178186,
+      "teamShort": "WHU",
+      "teamCode": 21,
+      "position": "FWD",
+      "price": 7.8
+    },
+    "628": {
+      "name": "José Sá",
+      "code": 149065,
+      "teamShort": "WOL",
+      "teamCode": 39,
+      "position": "GKP",
+      "price": 4.2
+    },
+    "670": {
+      "name": "Roefs",
+      "code": 498016,
+      "teamShort": "SUN",
+      "teamCode": 56,
+      "position": "GKP",
+      "price": 4.8
+    },
+    "683": {
+      "name": "Alderete",
+      "code": 201895,
+      "teamShort": "SUN",
+      "teamCode": 56,
+      "position": "DEF",
+      "price": 4.1
+    },
+    "691": {
+      "name": "Calvert-Lewin",
+      "code": 177815,
+      "teamShort": "LEE",
+      "teamCode": 2,
+      "position": "FWD",
+      "price": 5.8
+    },
+    "694": {
+      "name": "Mukiele",
+      "code": 200834,
+      "teamShort": "SUN",
+      "teamCode": 56,
+      "position": "DEF",
+      "price": 4.6
+    },
+    "791": {
+      "name": "Taty",
+      "code": 247670,
+      "teamShort": "WHU",
+      "teamCode": 21,
+      "position": "FWD",
+      "price": 5.5
+    }
   }
 }
