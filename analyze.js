@@ -440,7 +440,18 @@ function printSummary(d, outPath) {
   }
 }
 
-main().catch((err) => {
-  console.error("analyze.js failed:", err);
+main().catch(async (err) => {
+  console.error("analyze.js failed:", err.message || err);
+  // Resilience: the FPL API periodically returns 503 "Game Updating" (nightly price
+  // updates, off-season maintenance). If we already have a committed digest.json,
+  // keep it (last-good data) and exit 0 so compose+email still run — the newsletter's
+  // staleness check will flag that the data is old. Only hard-fail with no fallback.
+  const { existsSync } = await import("node:fs");
+  const digestPath = path.join(__dirname, "digest.json");
+  if (existsSync(digestPath)) {
+    console.error("→ FPL API unavailable; keeping the existing digest.json (last-good data) so the newsletter can still be produced.");
+    process.exit(0);
+  }
+  console.error("→ No existing digest.json to fall back on. Failing.");
   process.exit(1);
 });

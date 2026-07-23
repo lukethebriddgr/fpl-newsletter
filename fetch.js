@@ -52,14 +52,20 @@ export async function getJSON(pathname, opts = {}) {
     try {
       const res = await fetch(url, {
         headers: {
-          // FPL occasionally rejects the default Node UA; a browser-like UA is safe.
+          // FPL is behind Cloudflare and 403s non-browser-looking requests from
+          // datacenter IPs (e.g. CI runners). Present as a real browser.
           "User-Agent":
-            "Mozilla/5.0 (fpl-newsletter; +https://github.com/) Node",
-          Accept: "application/json",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+          Accept: "application/json, text/plain, */*",
+          "Accept-Language": "en-GB,en;q=0.9",
+          Referer: "https://fantasy.premierleague.com/",
         },
       });
       if (res.status === 404) return null; // e.g. picks before a GW exists
-      if (!res.ok) throw new Error(`HTTP ${res.status} for ${pathname}`);
+      if (!res.ok) {
+        const body = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status} for ${pathname} :: ${body.slice(0, 160).replace(/\s+/g, " ")}`);
+      }
       const data = await res.json();
       await writeFile(file, JSON.stringify({ __ts: Date.now(), __data: data }));
       return data;
