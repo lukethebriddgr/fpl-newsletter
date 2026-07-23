@@ -28,7 +28,7 @@ const C = {
   chip: "#f3f0f7",
 };
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
-const MAXW = 680;
+const MAXW = 900; // landscape desktop; content stacks to 1-up on phones
 
 // --- helpers ----------------------------------------------------------------
 const esc = (s) =>
@@ -118,7 +118,7 @@ function renderPlayers(s, idx) {
       const cards = (g.players || [])
         .map(
           (pl) =>
-            `<div style="display:inline-block;width:100%;max-width:302px;vertical-align:top;box-sizing:border-box;padding:0 10px 4px 0;">${playerRow(idx[pl.id] || { name: pl.name }, pl.note, pl.stat)}</div>`
+            `<div style="display:inline-block;width:100%;max-width:272px;vertical-align:top;box-sizing:border-box;padding:0 10px 6px 0;">${playerRow(idx[pl.id] || { name: pl.name }, pl.note, pl.stat)}</div>`
         )
         .join("");
       const label = g.label
@@ -130,33 +130,29 @@ function renderPlayers(s, idx) {
   return sectionShell(s.heading || "Players", s.subheading, groups, C.pink);
 }
 
+// Recommendations as a 3-up landscape card row on desktop; stacks on mobile.
 function renderRecommendations(s, idx) {
-  const items = (s.items || [])
+  const cards = (s.items || [])
     .map((it) => {
       const chips = (it.playerIds || [])
         .map((id) => idx[id])
         .filter(Boolean)
         .map((p) => {
           const badge = badgeUrl(p.teamCode);
-          return `<span style="display:inline-block;margin:5px 6px 0 0;padding:4px 10px;background:${C.chip};border-radius:999px;font:700 12px/1.3 ${FONT};color:${C.ink};">${badge ? `<img src="${badge}" width="14" height="14" style="vertical-align:middle;margin-right:4px;" alt="" />` : ""}${esc(p.name)}</span>`;
+          return `<span style="display:inline-block;margin:5px 5px 0 0;padding:4px 9px;background:#fff;border-radius:999px;font:700 11px/1.3 ${FONT};color:${C.ink};">${badge ? `<img src="${badge}" width="13" height="13" style="vertical-align:middle;margin-right:4px;" alt="" />` : ""}${esc(p.name)}</span>`;
         })
         .join("");
-      return `
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 14px;">
-        <tr>
-          <td width="32" valign="top" style="width:32px;padding:0;">
-            <div style="width:26px;height:26px;border-radius:50%;background:${C.pink};color:#fff;font:800 14px/26px ${FONT};text-align:center;">${esc(it.rank ?? "")}</div>
-          </td>
-          <td valign="top" style="padding:0 0 0 6px;">
-            <div style="font:800 15px/1.35 ${FONT};color:${C.ink};">${esc(it.move || it.title || "")}</div>
-            ${it.why ? `<div style="font:500 13px/1.55 ${FONT};color:${C.body};margin-top:3px;">${esc(it.why)}</div>` : ""}
-            ${chips ? `<div style="margin-top:5px;">${chips}</div>` : ""}
-          </td>
-        </tr>
-      </table>`;
+      return `<div style="display:inline-block;width:100%;max-width:275px;vertical-align:top;box-sizing:border-box;padding:0 10px 8px 0;">
+        <div style="background:${C.chip};border-radius:12px;padding:14px 15px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:${C.pink};color:#fff;font:800 14px/26px ${FONT};text-align:center;margin-bottom:9px;">${esc(it.rank ?? "")}</div>
+          <div style="font:800 15px/1.3 ${FONT};color:${C.ink};">${esc(it.move || it.title || "")}</div>
+          ${it.why ? `<div style="font:500 13px/1.55 ${FONT};color:${C.body};margin-top:5px;">${esc(it.why)}</div>` : ""}
+          ${chips ? `<div style="margin-top:7px;">${chips}</div>` : ""}
+        </div>
+      </div>`;
     })
     .join("");
-  return sectionShell(s.heading || "Your top moves", s.subheading, items, C.green);
+  return sectionShell(s.heading || "Your top moves", s.subheading, `<div style="font-size:0;">${cards}</div>`, C.green);
 }
 
 function renderRoadmap(s) {
