@@ -14,10 +14,22 @@ if (!GMAIL_ADDRESS || !GMAIL_APP_PASSWORD) {
 }
 
 const html = await readFile("newsletter.html", "utf8");
-const digest = JSON.parse(await readFile("digest.json", "utf8"));
-const gw = digest?.meta?.lastFinishedGw ?? "?";
-const date = new Date().toISOString().slice(0, 10);
-const subject = `FPL Newsletter - GW${gw} - ${date}`;
+
+// Prefer the composed subject (render.js writes content.subject into <title>);
+// fall back to a generated one only if the title is missing/default.
+const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
+const composedSubject = titleMatch
+  ? titleMatch[1].replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').trim()
+  : "";
+let subject = composedSubject;
+if (!subject || subject === "FPL Brief") {
+  let gw = "?";
+  try {
+    const digest = JSON.parse(await readFile("digest.json", "utf8"));
+    gw = digest?.meta?.lastFinishedGw ?? "?";
+  } catch {}
+  subject = `FPL Brief - GW${gw} - ${new Date().toISOString().slice(0, 10)}`;
+}
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
