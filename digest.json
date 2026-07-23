@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-23T12:12:41.263Z",
+    "generatedAt": "2026-07-23T12:28:56.450Z",
     "dataSource": "Official FPL API (public)",
     "season": "2026/27",
     "seasonState": "preseason",
@@ -660,7 +660,8 @@
       "teamShort": "AVL",
       "teamCode": 7,
       "position": "FWD",
-      "price": 8
+      "price": 8,
+      "hasPhoto": true
     },
     "57": {
       "name": "Petrović",
@@ -668,7 +669,8 @@
       "teamShort": "BOU",
       "teamCode": 91,
       "position": "GKP",
-      "price": 4.5
+      "price": 4.5,
+      "hasPhoto": true
     },
     "61": {
       "name": "Truffert",
@@ -676,7 +678,8 @@
       "teamShort": "BOU",
       "teamCode": 91,
       "position": "DEF",
-      "price": 5.5
+      "price": 5.5,
+      "hasPhoto": false
     },
     "68": {
       "name": "Tavernier",
@@ -684,7 +687,8 @@
       "teamShort": "BOU",
       "teamCode": 91,
       "position": "MID",
-      "price": 6
+      "price": 6,
+      "hasPhoto": true
     },
     "82": {
       "name": "Kelleher",
@@ -692,7 +696,8 @@
       "teamShort": "BRE",
       "teamCode": 94,
       "position": "GKP",
-      "price": 5
+      "price": 5,
+      "hasPhoto": true
     },
     "94": {
       "name": "Schade",
@@ -700,7 +705,8 @@
       "teamShort": "BRE",
       "teamCode": 94,
       "position": "MID",
-      "price": 6
+      "price": 6,
+      "hasPhoto": true
     },
     "106": {
       "name": "Thiago",
@@ -708,7 +714,8 @@
       "teamShort": "BRE",
       "teamCode": 94,
       "position": "FWD",
-      "price": 8
+      "price": 8,
+      "hasPhoto": true
     },
     "109": {
       "name": "Verbruggen",
@@ -716,7 +723,8 @@
       "teamShort": "BHA",
       "teamCode": 36,
       "position": "GKP",
-      "price": 4.5
+      "price": 4.5,
+      "hasPhoto": true
     },
     "112": {
       "name": "Van Hecke",
@@ -724,7 +732,8 @@
       "teamShort": "TOT",
       "teamCode": 6,
       "position": "DEF",
-      "price": 5
+      "price": 5,
+      "hasPhoto": true
     },
     "136": {
       "name": "Welbeck",
@@ -732,7 +741,8 @@
       "teamShort": "BHA",
       "teamCode": 36,
       "position": "FWD",
-      "price": 6
+      "price": 6,
+      "hasPhoto": true
     },
     "155": {
       "name": "Enzo",
@@ -740,7 +750,8 @@
       "teamShort": "CHE",
       "teamCode": 8,
       "position": "MID",
-      "price": 7
+      "price": 7,
+      "hasPhoto": true
     },
     "165": {
       "name": "João Pedro",
@@ -748,7 +759,8 @@
       "teamShort": "CHE",
       "teamCode": 8,
       "position": "FWD",
-      "price": 7.5
+      "price": 7.5,
+      "hasPhoto": true
     },
     "204": {
       "name": "Mitchell",
@@ -756,7 +768,8 @@
       "teamShort": "CRY",
       "teamCode": 31,
       "position": "DEF",
-      "price": 4.5
+      "price": 4.5,
+      "hasPhoto": true
     },
     "223": {
       "name": "Mateta",
@@ -764,7 +777,8 @@
       "teamShort": "CRY",
       "teamCode": 31,
       "position": "FWD",
-      "price": 6.5
+      "price": 6.5,
+      "hasPhoto": true
     },
     "229": {
       "name": "Tarkowski",
@@ -772,7 +786,8 @@
       "teamShort": "EVE",
       "teamCode": 11,
       "position": "DEF",
-      "price": 6
+      "price": 6,
+      "hasPhoto": true
     },
     "346": {
       "name": "Calvert-Lewin",
@@ -780,7 +795,8 @@
       "teamShort": "LEE",
       "teamCode": 2,
       "position": "FWD",
-      "price": 6
+      "price": 6,
+      "hasPhoto": true
     },
     "388": {
       "name": "Guéhi",
@@ -788,7 +804,8 @@
       "teamShort": "MCI",
       "teamCode": 43,
       "position": "DEF",
-      "price": 6
+      "price": 6,
+      "hasPhoto": true
     },
     "427": {
       "name": "Mbeumo",
@@ -796,7 +813,8 @@
       "teamShort": "MUN",
       "teamCode": 1,
       "position": "MID",
-      "price": 8
+      "price": 8,
+      "hasPhoto": true
     },
     "481": {
       "name": "Anderson",
@@ -804,7 +822,8 @@
       "teamShort": "MCI",
       "teamCode": 43,
       "position": "MID",
-      "price": 6.5
+      "price": 6.5,
+      "hasPhoto": true
     },
     "498": {
       "name": "Senesi",
@@ -812,7 +831,8 @@
       "teamShort": "TOT",
       "teamCode": 6,
       "position": "DEF",
-      "price": 6
+      "price": 6,
+      "hasPhoto": true
     }
   }
 }

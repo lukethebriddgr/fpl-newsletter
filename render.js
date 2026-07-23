@@ -38,8 +38,10 @@ const esc = (s) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
+// 250x250 (square-ish, higher res) crops far better into a round avatar than the
+// 110x140 portrait — no squashing, and it stays crisp when scaled for retina.
 const photoUrl = (code) =>
-  code ? `https://resources.premierleague.com/premierleague/photos/players/110x140/p${code}.png` : null;
+  code ? `https://resources.premierleague.com/premierleague/photos/players/250x250/p${code}.png` : null;
 const badgeUrl = (teamCode) =>
   teamCode ? `https://resources.premierleague.com/premierleague/badges/t${teamCode}.png` : null;
 
@@ -50,10 +52,13 @@ function pill(text, { bg = C.chip, fg = C.ink } = {}) {
 // Fixed-size avatar in its own bgcolor cell: if the photo 404s or images are
 // blocked, the coloured circle + initial remains and nothing shifts.
 function avatarCell(p, size = 42) {
-  const photo = photoUrl(p?.code);
+  // Only emit an <img> when analyze.js confirmed the photo exists (hasPhoto).
+  // When hasPhoto is undefined (older digest), fall back to code-presence so
+  // existing data still renders photos.
+  const photo = p?.hasPhoto === false ? null : photoUrl(p?.code);
   const initial = esc((p?.name || "?").slice(0, 1).toUpperCase());
   const inner = photo
-    ? `<img src="${photo}" width="${size}" height="${size}" alt="" style="display:block;width:${size}px;height:${size}px;border-radius:50%;" />`
+    ? `<img src="${photo}" width="${size}" height="${size}" alt="" style="display:block;width:${size}px;height:${size}px;border-radius:50%;object-fit:cover;object-position:center top;" />`
     : `<span style="font:800 ${Math.round(size * 0.4)}px/${size}px ${FONT};color:#fff;">${initial}</span>`;
   return `<td width="${size}" valign="top" style="width:${size}px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="${size}" height="${size}" align="center" valign="middle" bgcolor="${C.purple}" style="width:${size}px;height:${size}px;background:${C.purple};border-radius:50%;text-align:center;">${inner}</td></tr></table></td>`;
 }

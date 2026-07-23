@@ -71,7 +71,7 @@ async function main() {
   const priceWatch = buildPriceWatch(bootstrap.elements, teams);
 
   // --- Player image/index (for the renderer's photos + badges) -------------
-  const playerIndex = buildPlayerIndex(
+  const playerIndex = await buildPlayerIndex(
     { bestOfWeek, consistentPerformers, valuePicks, priceWatch, manager },
     players,
     teams
@@ -419,7 +419,29 @@ function positionId(short) {
 
 // Compact lookup for every player referenced anywhere in the digest, so the
 // renderer can draw photos/badges without carrying image fields on every object.
-function buildPlayerIndex(sections, players, teams) {
+// Verify a player photo actually exists on the PL CDN (it returns 403, not 404,
+// for missing images). Cheap HEAD with a browser UA; failures are treated as "no
+// photo" so the renderer shows the coloured-initial fallback instead of a broken
+// <img>. 8s timeout so a stuck request can't hang the whole run.
+async function photoExists(code) {
+  if (!code) return false;
+  const url = `https://resources.premierleague.com/premierleague/photos/players/250x250/p${code}.png`;
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 8000);
+    const res = await fetch(url, {
+      method: "HEAD",
+      headers: { "User-Agent": "Mozilla/5.0" },
+      signal: ctrl.signal,
+    });
+    clearTimeout(t);
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+async function buildPlayerIndex(sections, players, teams) {
   const ids = new Set();
   const add = (arr) => (arr || []).forEach((p) => p && p.id != null && ids.add(p.id));
   const b = sections.bestOfWeek || {};
@@ -437,6 +459,7 @@ function buildPlayerIndex(sections, players, teams) {
     });
   }
   const index = {};
+  const entries = [];
   for (const id of ids) {
     const p = players.get(id);
     if (!p) continue;
@@ -449,7 +472,13 @@ function buildPlayerIndex(sections, players, teams) {
       position: POS[p.element_type],
       price: round(p.now_cost / 10, 1),
     };
+    entries.push([id, p.code]);
   }
+  // Confirm each photo exists so the renderer never emits a broken <img>.
+  const flags = await Promise.all(entries.map(([, code]) => photoExists(code)));
+  entries.forEach(([id], i) => {
+    index[id].hasPhoto = flags[i];
+  });
   return index;
 }
 

@@ -11,3 +11,4 @@ node_modules/
 
 # build artifact (regenerated each run, uploaded as an Actions artifact)
 newsletter.html
+newsletter-preview.html
