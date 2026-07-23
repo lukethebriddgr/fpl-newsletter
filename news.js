@@ -186,7 +186,7 @@ ${JSON.stringify(items.map((i) => ({ title: i.title, source: i.source, url: i.li
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 5000,
+      max_tokens: 8000,
       thinking: { type: "disabled" },
       system: SYSTEM,
       tools: [NEWS_TOOL],
@@ -199,7 +199,13 @@ ${JSON.stringify(items.map((i) => ({ title: i.title, source: i.source, url: i.li
   const toolBlock = (data.content || []).find((b) => b.type === "tool_use");
   if (!toolBlock?.input) throw new Error(`no tool_use in response (stop_reason=${data.stop_reason})`);
   const content = toolBlock.input;
-  if (!Array.isArray(content.sections) || content.sections.length === 0) throw new Error("no sections");
+  if (!Array.isArray(content.sections) || content.sections.length === 0) {
+    console.error(
+      `news.js: tool returned no sections. stop_reason=${data.stop_reason}, keys=${Object.keys(content).join(",")}, ` +
+        `snippet=${JSON.stringify(content).slice(0, 400)}`
+    );
+    throw new Error(`no sections (stop_reason=${data.stop_reason})`);
+  }
   return content;
 }
 
