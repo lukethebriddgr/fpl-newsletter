@@ -12,6 +12,18 @@ const MODEL = process.env.NEWSLETTER_MODEL || "claude-sonnet-5";
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
 const digest = JSON.parse(await readFile("digest.json", "utf8"));
+
+// Mode switch: before GW1 (pre-season / between seasons) there are no gameweek
+// stats to analyse, so ship the RSS NEWS digest instead of the stats newsletter.
+// Once the season is underway we fall through to the stats compose below.
+const seasonState = digest?.meta?.seasonState;
+if (seasonState === "preseason" || seasonState === "ended") {
+  console.log(`compose.js: seasonState=${seasonState} → news digest mode.`);
+  const { runNewsDigest } = await import("./news.js");
+  await runNewsDigest();
+  process.exit(0);
+}
+
 const methodology = await readFile("METHODOLOGY.md", "utf8");
 
 // Tool schema describing the newsletter content contract. Non-strict: the model

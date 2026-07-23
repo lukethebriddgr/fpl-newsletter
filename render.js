@@ -194,6 +194,38 @@ function renderWatch(s, idx) {
   return sectionShell(s.heading || "Price watch", s.subheading, inner, C.pink);
 }
 
+// Pre-season / news digest: a stack of story cards, each with a category pill,
+// a headline, the FPL "so what", and a source + link. Category → accent colour.
+function renderNews(s) {
+  const CAT = {
+    TRANSFER: C.pink,
+    INJURY: "#e0761b",
+    MANAGER: C.purple,
+    FRIENDLY: "#0aa06e",
+    "SET PIECES": C.cyan,
+    RETURN: "#0aa06e",
+    SUSPENSION: "#e0761b",
+  };
+  const cards = (s.items || [])
+    .map((it) => {
+      const cat = (it.category || "NEWS").toUpperCase();
+      const accent = CAT[cat] || C.ink;
+      const src = [it.source, it.date].filter(Boolean).join(" · ");
+      const link = it.url
+        ? `<a href="${esc(it.url)}" style="color:${C.pink};text-decoration:none;font-weight:700;">Read &rarr;</a>`
+        : "";
+      return `
+      <div style="border-left:4px solid ${accent};background:${C.chip};border-radius:0 12px 12px 0;padding:12px 15px;margin:0 0 10px;">
+        <div style="margin:0 0 6px;">${pill(cat, { bg: accent, fg: cat === "SET PIECES" ? C.ink : "#fff" })}</div>
+        <div style="font:800 15px/1.3 ${FONT};color:${C.ink};">${esc(it.headline || "")}</div>
+        ${it.why ? `<div style="font:500 13px/1.55 ${FONT};color:${C.body};margin-top:5px;">${esc(it.why)}</div>` : ""}
+        ${src || link ? `<div style="font:600 11px/1.5 ${FONT};color:${C.muted};margin-top:7px;">${esc(src)}${src && link ? " &nbsp;·&nbsp; " : ""}${link}</div>` : ""}
+      </div>`;
+    })
+    .join("");
+  return sectionShell(s.heading || "This week in the Premier League", s.subheading, cards, C.pink);
+}
+
 function renderProse(s) {
   const paras = (s.paragraphs || [])
     .map((p) => `<div style="font:500 14px/1.65 ${FONT};color:${C.body};margin:0 0 10px;">${esc(p)}</div>`)
@@ -210,6 +242,7 @@ const RENDERERS = {
   recommendations: renderRecommendations,
   roadmap: renderRoadmap,
   watch: renderWatch,
+  news: renderNews,
   prose: renderProse,
 };
 
