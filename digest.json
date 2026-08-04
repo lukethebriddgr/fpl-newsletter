@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-28T09:31:55.164Z",
+    "generatedAt": "2026-08-04T09:35:05.037Z",
     "dataSource": "Official FPL API (public)",
     "season": "2026/27",
     "seasonState": "preseason",
@@ -11,7 +11,26 @@
   },
   "manager": {
     "id": "1899953",
-    "error": "Manager not found or no data yet."
+    "name": "Sfundo Dludla",
+    "teamName": "Izinyosi",
+    "overallRank": null,
+    "totalPoints": null,
+    "lastGwPoints": null,
+    "squadValue": 0,
+    "bank": 0,
+    "freeTransfersEstimate": 1,
+    "freeTransfersNote": "Estimated from last GW activity; exact FT requires authenticated my-team access.",
+    "chipsUsed": [],
+    "chipsRemaining": {
+      "wildcard": 2,
+      "bboost": 2,
+      "3xc": 2,
+      "freehit": 2
+    },
+    "chipsNote": "Remaining assumes a standard 2-of-each allotment; confirm against your season's chip rules.",
+    "pickGw": null,
+    "squad": [],
+    "upgradeSuggestions": []
   },
   "bestOfWeek": {
     "gw": null,
@@ -594,7 +613,7 @@
       {
         "id": 136,
         "name": "Welbeck",
-        "team": "BHA",
+        "team": "CHE",
         "position": "FWD",
         "price": 6,
         "seasonPoints": 126,
@@ -738,8 +757,8 @@
     "136": {
       "name": "Welbeck",
       "code": 50175,
-      "teamShort": "BHA",
-      "teamCode": 36,
+      "teamShort": "CHE",
+      "teamCode": 8,
       "position": "FWD",
       "price": 6,
       "hasPhoto": true
