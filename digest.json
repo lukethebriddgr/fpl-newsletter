@@ -1,24 +1,26 @@
 {
   "meta": {
-    "generatedAt": "2026-08-25T07:37:15.103Z",
+    "generatedAt": "2026-09-01T12:15:39.654Z",
     "dataSource": "Official FPL API (public)",
     "season": "2026/27",
     "seasonState": "in_season",
-    "lastFinishedGw": null,
-    "nextGw": 2,
-    "recentWindowGws": [],
+    "lastFinishedGw": 1,
+    "nextGw": 3,
+    "recentWindowGws": [
+      1
+    ],
     "note": null
   },
   "manager": {
     "id": "1899953",
     "name": "Sfundo Dludla",
     "teamName": "Izinyosi",
-    "overallRank": 2453854,
-    "totalPoints": 55,
-    "lastGwPoints": 55,
-    "squadValue": 100,
-    "bank": 1,
-    "freeTransfersEstimate": 2,
+    "overallRank": 1938794,
+    "totalPoints": 151,
+    "lastGwPoints": 96,
+    "squadValue": 100.1,
+    "bank": 1.5,
+    "freeTransfersEstimate": 1,
     "freeTransfersNote": "Estimated from last GW activity; exact FT requires authenticated my-team access.",
     "chipsUsed": [],
     "chipsRemaining": {
@@ -28,7 +30,7 @@
       "freehit": 2
     },
     "chipsNote": "Remaining assumes a standard 2-of-each allotment; confirm against your season's chip rules.",
-    "pickGw": 1,
+    "pickGw": 2,
     "squad": [
       {
         "id": 1,
@@ -41,34 +43,34 @@
         "multiplier": 1,
         "onBench": false,
         "form": 6,
-        "seasonPoints": 6,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "seasonPoints": 12,
+        "recentMeanPoints": 6,
+        "xgiPer90": 0,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 4.23
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 5.1
       },
       {
-        "id": 417,
-        "name": "Dalot",
-        "team": "MUN",
+        "id": 254,
+        "name": "Robinson",
+        "team": "FUL",
         "position": "DEF",
-        "price": 5,
+        "price": 4.5,
         "isCaptain": false,
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 1,
-        "seasonPoints": 1,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 1.5,
+        "seasonPoints": 3,
+        "recentMeanPoints": 1,
+        "xgiPer90": 0.19,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
         "nextFixturesAvgDifficulty": 3,
-        "projection": 1.35
+        "projection": 2.48
       },
       {
         "id": 536,
@@ -80,15 +82,15 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 1,
-        "seasonPoints": 1,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 3.5,
+        "seasonPoints": 7,
+        "recentMeanPoints": 1,
+        "xgiPer90": 0.29,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 1.23
+        "nextFixturesAvgDifficulty": 3.4,
+        "projection": 2.44
       },
       {
         "id": 332,
@@ -100,15 +102,15 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 10,
-        "seasonPoints": 10,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 6,
+        "seasonPoints": 12,
+        "recentMeanPoints": 10,
+        "xgiPer90": 0.01,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 6.63
+        "nextFixturesAvgDifficulty": 3.4,
+        "projection": 7.28
       },
       {
         "id": 426,
@@ -116,19 +118,19 @@
         "team": "MUN",
         "position": "MID",
         "price": 12,
-        "isCaptain": true,
-        "isVice": false,
-        "multiplier": 2,
+        "isCaptain": false,
+        "isVice": true,
+        "multiplier": 1,
         "onBench": false,
-        "form": 2,
-        "seasonPoints": 2,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 12.5,
+        "seasonPoints": 25,
+        "recentMeanPoints": 2,
+        "xgiPer90": 0.34,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3,
-        "projection": 1.95
+        "nextFixturesAvgDifficulty": 3.2,
+        "projection": 3.26
       },
       {
         "id": 368,
@@ -140,15 +142,15 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 8,
-        "seasonPoints": 8,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 6,
+        "seasonPoints": 12,
+        "recentMeanPoints": 8,
+        "xgiPer90": 1.12,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
         "nextFixturesAvgDifficulty": 2.8,
-        "projection": 5.67
+        "projection": 8.66
       },
       {
         "id": 237,
@@ -160,55 +162,55 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 9,
-        "seasonPoints": 9,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 6.5,
+        "seasonPoints": 13,
+        "recentMeanPoints": 9,
+        "xgiPer90": 0.56,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 2.8,
-        "projection": 6.27
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 8.02
       },
       {
-        "id": 542,
-        "name": "E.Le Fée",
-        "team": "SUN",
+        "id": 268,
+        "name": "King",
+        "team": "FUL",
+        "position": "MID",
+        "price": 5.5,
+        "isCaptain": false,
+        "isVice": false,
+        "multiplier": 1,
+        "onBench": false,
+        "form": 4.5,
+        "seasonPoints": 9,
+        "recentMeanPoints": 7,
+        "xgiPer90": 0.21,
+        "minutesReliability": 1,
+        "status": "a",
+        "chanceNextRound": null,
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 6.12
+      },
+      {
+        "id": 69,
+        "name": "Scott",
+        "team": "BOU",
         "position": "MID",
         "price": 6,
         "isCaptain": false,
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 2,
-        "seasonPoints": 2,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 7,
+        "seasonPoints": 14,
+        "recentMeanPoints": 2,
+        "xgiPer90": 0.01,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
         "nextFixturesAvgDifficulty": 3.2,
-        "projection": 1.83
-      },
-      {
-        "id": 553,
-        "name": "Isidor",
-        "team": "SUN",
-        "position": "FWD",
-        "price": 5.5,
-        "isCaptain": false,
-        "isVice": false,
-        "multiplier": 1,
-        "onBench": false,
-        "form": 1,
-        "seasonPoints": 1,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
-        "status": "a",
-        "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 1.23
+        "projection": 2.6
       },
       {
         "id": 411,
@@ -216,39 +218,39 @@
         "team": "MCI",
         "position": "FWD",
         "price": 15.5,
-        "isCaptain": false,
-        "isVice": true,
-        "multiplier": 1,
+        "isCaptain": true,
+        "isVice": false,
+        "multiplier": 2,
         "onBench": false,
-        "form": 2,
-        "seasonPoints": 2,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 7.5,
+        "seasonPoints": 15,
+        "recentMeanPoints": 2,
+        "xgiPer90": 0.76,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3,
-        "projection": 1.95
+        "nextFixturesAvgDifficulty": 2.8,
+        "projection": 4.34
       },
       {
         "id": 165,
         "name": "João Pedro",
         "team": "CHE",
         "position": "FWD",
-        "price": 7.5,
+        "price": 7.6,
         "isCaptain": false,
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 11,
-        "seasonPoints": 11,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 10,
+        "seasonPoints": 20,
+        "recentMeanPoints": 11,
+        "xgiPer90": 0.69,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3,
-        "projection": 7.35
+        "nextFixturesAvgDifficulty": 3.2,
+        "projection": 9.36
       },
       {
         "id": 250,
@@ -260,91 +262,326 @@
         "isVice": false,
         "multiplier": 0,
         "onBench": true,
-        "form": 2,
-        "seasonPoints": 2,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 2.5,
+        "seasonPoints": 5,
+        "recentMeanPoints": 2,
+        "xgiPer90": 0,
+        "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 1.83
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 2.7
       },
       {
-        "id": 69,
-        "name": "Scott",
-        "team": "BOU",
-        "position": "MID",
-        "price": 6,
+        "id": 553,
+        "name": "Isidor",
+        "team": "SUN",
+        "position": "FWD",
+        "price": 5.5,
         "isCaptain": false,
         "isVice": false,
         "multiplier": 0,
         "onBench": true,
-        "form": 2,
-        "seasonPoints": 2,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "form": 4.5,
+        "seasonPoints": 9,
+        "recentMeanPoints": 1,
+        "xgiPer90": 0,
+        "minutesReliability": 0,
         "status": "a",
         "chanceNextRound": null,
         "nextFixturesAvgDifficulty": 3.4,
-        "projection": 1.71
+        "projection": 0.36
+      },
+      {
+        "id": 417,
+        "name": "Dalot",
+        "team": "MUN",
+        "position": "DEF",
+        "price": 5,
+        "isCaptain": false,
+        "isVice": false,
+        "multiplier": 0,
+        "onBench": true,
+        "form": 1.5,
+        "seasonPoints": 3,
+        "recentMeanPoints": 1,
+        "xgiPer90": 0,
+        "minutesReliability": 0,
+        "status": "a",
+        "chanceNextRound": null,
+        "nextFixturesAvgDifficulty": 3.2,
+        "projection": 0.48
       },
       {
         "id": 113,
         "name": "F.Kadıoğlu",
         "team": "BHA",
         "position": "DEF",
-        "price": 4.5,
+        "price": 4.4,
         "isCaptain": false,
         "isVice": false,
         "multiplier": 0,
         "onBench": true,
         "form": 0,
         "seasonPoints": 0,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
-        "status": "d",
-        "chanceNextRound": 75,
-        "nextFixturesAvgDifficulty": 3,
-        "projection": 0.75
-      },
-      {
-        "id": 254,
-        "name": "Robinson",
-        "team": "FUL",
-        "position": "DEF",
-        "price": 4.5,
-        "isCaptain": false,
-        "isVice": false,
-        "multiplier": 0,
-        "onBench": true,
-        "form": 1,
-        "seasonPoints": 1,
-        "recentMeanPoints": null,
-        "xgiPer90": null,
-        "minutesReliability": null,
+        "recentMeanPoints": 0,
+        "xgiPer90": 0,
+        "minutesReliability": 0,
         "status": "a",
-        "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 1.23
+        "chanceNextRound": 100,
+        "nextFixturesAvgDifficulty": 2.8,
+        "projection": 0.12
       }
     ],
     "upgradeSuggestions": []
   },
   "bestOfWeek": {
-    "gw": null,
-    "GKP": [],
-    "DEF": [],
-    "MID": [],
-    "FWD": []
+    "gw": 1,
+    "GKP": [
+      {
+        "id": 572,
+        "name": "Tzolakis",
+        "team": "HUL",
+        "position": "GKP",
+        "price": 4.5,
+        "minutes": 90,
+        "points": 10,
+        "xg": 0,
+        "xa": 0,
+        "xgi": 0,
+        "xgc": 1.83,
+        "threat": 0,
+        "creativity": 0,
+        "ict": 3.5,
+        "bps": 41,
+        "bonus": 3,
+        "defensiveContribution": 0,
+        "saves": 5,
+        "underlyingScore": 1.159
+      },
+      {
+        "id": 82,
+        "name": "Kelleher",
+        "team": "BRE",
+        "position": "GKP",
+        "price": 5,
+        "minutes": 90,
+        "points": 7,
+        "xg": 0,
+        "xa": 0.01,
+        "xgi": 0.01,
+        "xgc": 0.57,
+        "threat": 0,
+        "creativity": 0,
+        "ict": 3.1,
+        "bps": 34,
+        "bonus": 0,
+        "defensiveContribution": 0,
+        "saves": 4,
+        "underlyingScore": 1.069
+      }
+    ],
+    "DEF": [
+      {
+        "id": 115,
+        "name": "De Cuyper",
+        "team": "BHA",
+        "position": "DEF",
+        "price": 4.7,
+        "minutes": 77,
+        "points": 17,
+        "xg": 1.47,
+        "xa": 0.21,
+        "xgi": 1.68,
+        "xgc": 0.29,
+        "threat": 43,
+        "creativity": 45.3,
+        "ict": 12.9,
+        "bps": 46,
+        "bonus": 2,
+        "defensiveContribution": 4,
+        "saves": 0,
+        "underlyingScore": 2.902
+      },
+      {
+        "id": 388,
+        "name": "Guéhi",
+        "team": "MCI",
+        "position": "DEF",
+        "price": 6,
+        "minutes": 90,
+        "points": 10,
+        "xg": 0.89,
+        "xa": 0.32,
+        "xgi": 1.21,
+        "xgc": 0.65,
+        "threat": 28,
+        "creativity": 17.5,
+        "ict": 8.9,
+        "bps": 31,
+        "bonus": 2,
+        "defensiveContribution": 4,
+        "saves": 0,
+        "underlyingScore": 1.829
+      },
+      {
+        "id": 279,
+        "name": "Ajayi",
+        "team": "HUL",
+        "position": "DEF",
+        "price": 4.1,
+        "minutes": 63,
+        "points": 14,
+        "xg": 0.52,
+        "xa": 0,
+        "xgi": 0.52,
+        "xgc": 0.86,
+        "threat": 35,
+        "creativity": 0.2,
+        "ict": 7.9,
+        "bps": 39,
+        "bonus": 2,
+        "defensiveContribution": 7,
+        "saves": 0,
+        "underlyingScore": 1.317
+      }
+    ],
+    "MID": [
+      {
+        "id": 123,
+        "name": "Hinshelwood",
+        "team": "BHA",
+        "position": "MID",
+        "price": 6,
+        "minutes": 63,
+        "points": 16,
+        "xg": 1.41,
+        "xa": 0.02,
+        "xgi": 1.43,
+        "xgc": 0.19,
+        "threat": 59,
+        "creativity": 13.4,
+        "ict": 14.5,
+        "bps": 54,
+        "bonus": 3,
+        "defensiveContribution": 3,
+        "saves": 0,
+        "underlyingScore": 2.915
+      },
+      {
+        "id": 40,
+        "name": "Rogers",
+        "team": "CHE",
+        "position": "MID",
+        "price": 7.5,
+        "minutes": 81,
+        "points": 8,
+        "xg": 0.96,
+        "xa": 0.1,
+        "xgi": 1.06,
+        "xgc": 1.24,
+        "threat": 29,
+        "creativity": 53.5,
+        "ict": 13.1,
+        "bps": 37,
+        "bonus": 1,
+        "defensiveContribution": 7,
+        "saves": 0,
+        "underlyingScore": 2.103
+      },
+      {
+        "id": 368,
+        "name": "Szoboszlai",
+        "team": "LIV",
+        "position": "MID",
+        "price": 7,
+        "minutes": 90,
+        "points": 8,
+        "xg": 0.85,
+        "xa": 0.27,
+        "xgi": 1.12,
+        "xgc": 1.58,
+        "threat": 21,
+        "creativity": 47.1,
+        "ict": 11.9,
+        "bps": 29,
+        "bonus": 1,
+        "defensiveContribution": 7,
+        "saves": 0,
+        "underlyingScore": 1.946
+      }
+    ],
+    "FWD": [
+      {
+        "id": 316,
+        "name": "Emersonn",
+        "team": "IPS",
+        "position": "FWD",
+        "price": 5.5,
+        "minutes": 65,
+        "points": 9,
+        "xg": 0.82,
+        "xa": 0.06,
+        "xgi": 0.88,
+        "xgc": 0.63,
+        "threat": 40,
+        "creativity": 26.3,
+        "ict": 11.2,
+        "bps": 41,
+        "bonus": 3,
+        "defensiveContribution": 3,
+        "saves": 0,
+        "underlyingScore": 1.189
+      },
+      {
+        "id": 379,
+        "name": "Isak",
+        "team": "LIV",
+        "position": "FWD",
+        "price": 9,
+        "minutes": 90,
+        "points": 2,
+        "xg": 1.09,
+        "xa": 0.01,
+        "xgi": 1.1,
+        "xgc": 1.58,
+        "threat": 66,
+        "creativity": 14.6,
+        "ict": 9.2,
+        "bps": 6,
+        "bonus": 0,
+        "defensiveContribution": 1,
+        "saves": 0,
+        "underlyingScore": 1.12
+      },
+      {
+        "id": 224,
+        "name": "Nketiah",
+        "team": "CRY",
+        "position": "FWD",
+        "price": 5.5,
+        "minutes": 55,
+        "points": 1,
+        "xg": 0.6,
+        "xa": 0.58,
+        "xgi": 1.18,
+        "xgc": 0.84,
+        "threat": 23,
+        "creativity": 24.5,
+        "ict": 5.8,
+        "bps": 12,
+        "bonus": 0,
+        "defensiveContribution": 3,
+        "saves": 0,
+        "underlyingScore": 0.98
+      }
+    ]
   },
   "consistentPerformers": [],
   "fixtureRuns": {
     "horizon": 5,
     "available": true,
-    "fromGw": 2,
+    "fromGw": 3,
     "bestRuns": [
       {
         "team": "NEW",
@@ -353,12 +590,6 @@
         "avgDifficulty": 2.6,
         "doubleGws": [],
         "fixtures": [
-          {
-            "gw": 2,
-            "opp": "TOT",
-            "venue": "A",
-            "difficulty": 3
-          },
           {
             "gw": 3,
             "opp": "BOU",
@@ -382,6 +613,12 @@
             "opp": "COV",
             "venue": "A",
             "difficulty": 2
+          },
+          {
+            "gw": 7,
+            "opp": "AVL",
+            "venue": "H",
+            "difficulty": 3
           }
         ]
       },
@@ -392,12 +629,6 @@
         "avgDifficulty": 2.8,
         "doubleGws": [],
         "fixtures": [
-          {
-            "gw": 2,
-            "opp": "NFO",
-            "venue": "H",
-            "difficulty": 3
-          },
           {
             "gw": 3,
             "opp": "IPS",
@@ -421,84 +652,51 @@
             "opp": "MCI",
             "venue": "H",
             "difficulty": 4
+          },
+          {
+            "gw": 7,
+            "opp": "BRE",
+            "venue": "A",
+            "difficulty": 3
           }
         ]
       },
       {
-        "team": "EVE",
-        "teamId": 9,
+        "team": "BHA",
+        "teamId": 5,
         "count": 5,
         "avgDifficulty": 2.8,
         "doubleGws": [],
         "fixtures": [
           {
-            "gw": 2,
-            "opp": "BOU",
-            "venue": "A",
-            "difficulty": 3
+            "gw": 3,
+            "opp": "LEE",
+            "venue": "H",
+            "difficulty": 2
           },
           {
-            "gw": 3,
-            "opp": "MUN",
+            "gw": 4,
+            "opp": "COV",
+            "venue": "A",
+            "difficulty": 2
+          },
+          {
+            "gw": 5,
+            "opp": "ARS",
             "venue": "H",
             "difficulty": 4
           },
           {
-            "gw": 4,
-            "opp": "TOT",
+            "gw": 6,
+            "opp": "SUN",
             "venue": "A",
             "difficulty": 3
           },
           {
-            "gw": 5,
-            "opp": "IPS",
+            "gw": 7,
+            "opp": "CRY",
             "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 6,
-            "opp": "HUL",
-            "venue": "A",
-            "difficulty": 2
-          }
-        ]
-      },
-      {
-        "team": "COV",
-        "teamId": 7,
-        "count": 5,
-        "avgDifficulty": 2.8,
-        "doubleGws": [],
-        "fixtures": [
-          {
-            "gw": 2,
-            "opp": "HUL",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 3,
-            "opp": "MCI",
-            "venue": "A",
-            "difficulty": 5
-          },
-          {
-            "gw": 4,
-            "opp": "BHA",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 5,
-            "opp": "NFO",
-            "venue": "A",
             "difficulty": 3
-          },
-          {
-            "gw": 6,
-            "opp": "NEW",
-            "venue": "H",
-            "difficulty": 2
           }
         ]
       },
@@ -506,15 +704,9 @@
         "team": "CRY",
         "teamId": 8,
         "count": 5,
-        "avgDifficulty": 3,
+        "avgDifficulty": 2.8,
         "doubleGws": [],
         "fixtures": [
-          {
-            "gw": 2,
-            "opp": "MCI",
-            "venue": "H",
-            "difficulty": 4
-          },
           {
             "gw": 3,
             "opp": "FUL",
@@ -538,6 +730,12 @@
             "opp": "NFO",
             "venue": "H",
             "difficulty": 3
+          },
+          {
+            "gw": 7,
+            "opp": "BHA",
+            "venue": "A",
+            "difficulty": 3
           }
         ]
       },
@@ -545,15 +743,9 @@
         "team": "MCI",
         "teamId": 15,
         "count": 5,
-        "avgDifficulty": 3,
+        "avgDifficulty": 2.8,
         "doubleGws": [],
         "fixtures": [
-          {
-            "gw": 2,
-            "opp": "CRY",
-            "venue": "A",
-            "difficulty": 3
-          },
           {
             "gw": 3,
             "opp": "COV",
@@ -577,84 +769,168 @@
             "opp": "LIV",
             "venue": "A",
             "difficulty": 4
+          },
+          {
+            "gw": 7,
+            "opp": "IPS",
+            "venue": "H",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "team": "AVL",
+        "teamId": 2,
+        "count": 5,
+        "avgDifficulty": 2.8,
+        "doubleGws": [],
+        "fixtures": [
+          {
+            "gw": 3,
+            "opp": "HUL",
+            "venue": "A",
+            "difficulty": 2
+          },
+          {
+            "gw": 4,
+            "opp": "NFO",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 5,
+            "opp": "TOT",
+            "venue": "A",
+            "difficulty": 3
+          },
+          {
+            "gw": 6,
+            "opp": "BRE",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 7,
+            "opp": "NEW",
+            "venue": "A",
+            "difficulty": 3
           }
         ]
       }
     ],
     "worstRuns": [
       {
-        "team": "BOU",
-        "teamId": 3,
+        "team": "IPS",
+        "teamId": 12,
         "count": 5,
         "avgDifficulty": 3.4,
         "doubleGws": [],
         "fixtures": [
           {
-            "gw": 2,
-            "opp": "EVE",
+            "gw": 3,
+            "opp": "LIV",
             "venue": "H",
-            "difficulty": 3
+            "difficulty": 4
           },
           {
-            "gw": 3,
-            "opp": "NEW",
+            "gw": 4,
+            "opp": "CRY",
             "venue": "A",
             "difficulty": 3
           },
           {
-            "gw": 4,
-            "opp": "BRE",
+            "gw": 5,
+            "opp": "EVE",
+            "venue": "A",
+            "difficulty": 3
+          },
+          {
+            "gw": 6,
+            "opp": "FUL",
             "venue": "H",
+            "difficulty": 2
+          },
+          {
+            "gw": 7,
+            "opp": "MCI",
+            "venue": "A",
+            "difficulty": 5
+          }
+        ]
+      },
+      {
+        "team": "BRE",
+        "teamId": 4,
+        "count": 5,
+        "avgDifficulty": 3.4,
+        "doubleGws": [],
+        "fixtures": [
+          {
+            "gw": 3,
+            "opp": "SUN",
+            "venue": "H",
+            "difficulty": 2
+          },
+          {
+            "gw": 4,
+            "opp": "BOU",
+            "venue": "A",
             "difficulty": 3
           },
           {
             "gw": 5,
-            "opp": "LIV",
+            "opp": "CHE",
             "venue": "H",
             "difficulty": 4
           },
           {
             "gw": 6,
-            "opp": "CHE",
-            "venue": "A",
-            "difficulty": 4
-          }
-        ]
-      },
-      {
-        "team": "NFO",
-        "teamId": 18,
-        "count": 5,
-        "avgDifficulty": 3.2,
-        "doubleGws": [],
-        "fixtures": [
-          {
-            "gw": 2,
-            "opp": "LIV",
-            "venue": "A",
-            "difficulty": 4
-          },
-          {
-            "gw": 3,
-            "opp": "TOT",
-            "venue": "H",
-            "difficulty": 3
-          },
-          {
-            "gw": 4,
             "opp": "AVL",
             "venue": "A",
             "difficulty": 4
           },
           {
+            "gw": 7,
+            "opp": "LIV",
+            "venue": "H",
+            "difficulty": 4
+          }
+        ]
+      },
+      {
+        "team": "SUN",
+        "teamId": 20,
+        "count": 5,
+        "avgDifficulty": 3.4,
+        "doubleGws": [],
+        "fixtures": [
+          {
+            "gw": 3,
+            "opp": "BRE",
+            "venue": "A",
+            "difficulty": 3
+          },
+          {
+            "gw": 4,
+            "opp": "ARS",
+            "venue": "H",
+            "difficulty": 4
+          },
+          {
             "gw": 5,
-            "opp": "COV",
+            "opp": "MCI",
+            "venue": "A",
+            "difficulty": 5
+          },
+          {
+            "gw": 6,
+            "opp": "BHA",
             "venue": "H",
             "difficulty": 2
           },
           {
-            "gw": 6,
-            "opp": "CRY",
+            "gw": 7,
+            "opp": "BOU",
             "venue": "A",
             "difficulty": 3
           }
@@ -664,15 +940,9 @@
         "team": "LEE",
         "teamId": 13,
         "count": 5,
-        "avgDifficulty": 3.2,
+        "avgDifficulty": 3.4,
         "doubleGws": [],
         "fixtures": [
-          {
-            "gw": 2,
-            "opp": "BRE",
-            "venue": "H",
-            "difficulty": 3
-          },
           {
             "gw": 3,
             "opp": "BHA",
@@ -696,44 +966,11 @@
             "opp": "ARS",
             "venue": "A",
             "difficulty": 5
-          }
-        ]
-      },
-      {
-        "team": "BRE",
-        "teamId": 4,
-        "count": 5,
-        "avgDifficulty": 3.2,
-        "doubleGws": [],
-        "fixtures": [
-          {
-            "gw": 2,
-            "opp": "LEE",
-            "venue": "A",
-            "difficulty": 3
           },
           {
-            "gw": 3,
-            "opp": "SUN",
+            "gw": 7,
+            "opp": "MUN",
             "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 4,
-            "opp": "BOU",
-            "venue": "A",
-            "difficulty": 3
-          },
-          {
-            "gw": 5,
-            "opp": "CHE",
-            "venue": "H",
-            "difficulty": 4
-          },
-          {
-            "gw": 6,
-            "opp": "AVL",
-            "venue": "A",
             "difficulty": 4
           }
         ]
@@ -750,15 +987,15 @@
     "note": "Momentum approximation from public net transfers — directional, not the exact FPL threshold. Prices change ~01:30 UK daily.",
     "risers": [
       {
-        "id": 115,
-        "name": "De Cuyper",
-        "team": "BHA",
+        "id": 449,
+        "name": "Hall",
+        "team": "NEW",
         "position": "DEF",
-        "price": 4.5,
-        "selectedBy": 4.7,
-        "netTransfers": 236638,
-        "transfersIn": 243691,
-        "transfersOut": 7053,
+        "price": 5,
+        "selectedBy": 7.2,
+        "netTransfers": 244499,
+        "transfersIn": 274083,
+        "transfersOut": 29584,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "rising"
@@ -768,53 +1005,39 @@
         "name": "M.Sangaré",
         "team": "BRE",
         "position": "MID",
-        "price": 5.5,
-        "selectedBy": 5.7,
-        "netTransfers": 192402,
-        "transfersIn": 200766,
-        "transfersOut": 8364,
+        "price": 5.6,
+        "selectedBy": 11.8,
+        "netTransfers": 196091,
+        "transfersIn": 255309,
+        "transfersOut": 59218,
+        "costChangeEvent": 0,
+        "costChangeStart": 1,
+        "signal": "rising"
+      },
+      {
+        "id": 411,
+        "name": "Haaland",
+        "team": "MCI",
+        "position": "FWD",
+        "price": 15.5,
+        "selectedBy": 70.2,
+        "netTransfers": 181095,
+        "transfersIn": 203234,
+        "transfersOut": 22139,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "rising"
       },
       {
-        "id": 8,
-        "name": "Calafiori",
-        "team": "ARS",
-        "position": "DEF",
-        "price": 5.5,
-        "selectedBy": 40.9,
-        "netTransfers": 168157,
-        "transfersIn": 187026,
-        "transfersOut": 18869,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "rising"
-      },
-      {
-        "id": 88,
-        "name": "Kayode",
-        "team": "BRE",
-        "position": "DEF",
+        "id": 572,
+        "name": "Tzolakis",
+        "team": "HUL",
+        "position": "GKP",
         "price": 4.5,
-        "selectedBy": 5.3,
-        "netTransfers": 158104,
-        "transfersIn": 165754,
-        "transfersOut": 7650,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "rising"
-      },
-      {
-        "id": 15,
-        "name": "Ødegaard",
-        "team": "ARS",
-        "position": "MID",
-        "price": 6.5,
-        "selectedBy": 10.3,
-        "netTransfers": 145027,
-        "transfersIn": 160107,
-        "transfersOut": 15080,
+        "selectedBy": 6,
+        "netTransfers": 179806,
+        "transfersIn": 201510,
+        "transfersOut": 21704,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "rising"
@@ -824,67 +1047,81 @@
         "name": "João Pedro",
         "team": "CHE",
         "position": "FWD",
-        "price": 7.5,
-        "selectedBy": 65.2,
-        "netTransfers": 135470,
-        "transfersIn": 153301,
-        "transfersOut": 17831,
+        "price": 7.6,
+        "selectedBy": 69.7,
+        "netTransfers": 178723,
+        "transfersIn": 244046,
+        "transfersOut": 65323,
         "costChangeEvent": 0,
-        "costChangeStart": 0,
+        "costChangeStart": 1,
         "signal": "rising"
       },
       {
-        "id": 557,
-        "name": "Tzolis",
+        "id": 8,
+        "name": "Calafiori",
         "team": "ARS",
-        "position": "MID",
-        "price": 6.5,
-        "selectedBy": 25.6,
-        "netTransfers": 102992,
-        "transfersIn": 125318,
-        "transfersOut": 22326,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "rising"
-      },
-      {
-        "id": 391,
-        "name": "Gvardiol",
-        "team": "MCI",
         "position": "DEF",
-        "price": 5.5,
-        "selectedBy": 12.4,
-        "netTransfers": 89725,
-        "transfersIn": 104217,
-        "transfersOut": 14492,
+        "price": 5.6,
+        "selectedBy": 42.6,
+        "netTransfers": 160112,
+        "transfersIn": 219973,
+        "transfersOut": 59861,
+        "costChangeEvent": 0,
+        "costChangeStart": 1,
+        "signal": "rising"
+      },
+      {
+        "id": 277,
+        "name": "Egan",
+        "team": "HUL",
+        "position": "DEF",
+        "price": 4,
+        "selectedBy": 3.7,
+        "netTransfers": 133868,
+        "transfersIn": 154219,
+        "transfersOut": 20351,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "rising"
       },
       {
-        "id": 26,
-        "name": "Havertz",
-        "team": "ARS",
-        "position": "FWD",
-        "price": 7.5,
-        "selectedBy": 6.8,
-        "netTransfers": 89332,
-        "transfersIn": 104871,
-        "transfersOut": 15539,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "rising"
-      },
-      {
-        "id": 154,
-        "name": "Palmer",
-        "team": "CHE",
+        "id": 124,
+        "name": "Groß",
+        "team": "BHA",
         "position": "MID",
-        "price": 9.5,
-        "selectedBy": 11.9,
-        "netTransfers": 89153,
-        "transfersIn": 107050,
-        "transfersOut": 17897,
+        "price": 5.5,
+        "selectedBy": 13.9,
+        "netTransfers": 122482,
+        "transfersIn": 169662,
+        "transfersOut": 47180,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "rising"
+      },
+      {
+        "id": 593,
+        "name": "Dedić",
+        "team": "NEW",
+        "position": "DEF",
+        "price": 4.5,
+        "selectedBy": 1.6,
+        "netTransfers": 107663,
+        "transfersIn": 124237,
+        "transfersOut": 16574,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "rising"
+      },
+      {
+        "id": 229,
+        "name": "Tarkowski",
+        "team": "EVE",
+        "position": "DEF",
+        "price": 6,
+        "selectedBy": 10.1,
+        "netTransfers": 88903,
+        "transfersIn": 128297,
+        "transfersOut": 39394,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "rising"
@@ -892,141 +1129,141 @@
     ],
     "fallers": [
       {
-        "id": 499,
-        "name": "Pedro Porro",
-        "team": "TOT",
-        "position": "DEF",
-        "price": 5.5,
-        "selectedBy": 14.3,
-        "netTransfers": -227771,
-        "transfersIn": 3709,
-        "transfersOut": 231480,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 25,
-        "name": "Gyökeres",
-        "team": "ARS",
-        "position": "FWD",
-        "price": 7.5,
-        "selectedBy": 7.9,
-        "netTransfers": -115127,
-        "transfersIn": 5085,
-        "transfersOut": 120212,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 31,
-        "name": "Konsa",
-        "team": "ARS",
-        "position": "DEF",
-        "price": 4.5,
-        "selectedBy": 11.7,
-        "netTransfers": -106963,
-        "transfersIn": 24802,
-        "transfersOut": 131765,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 480,
-        "name": "Gibbs-White",
-        "team": "NFO",
-        "position": "MID",
-        "price": 8,
-        "selectedBy": 10.5,
-        "netTransfers": -96288,
-        "transfersIn": 6458,
-        "transfersOut": 102746,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 55,
-        "name": "Watkins",
-        "team": "AVL",
-        "position": "FWD",
-        "price": 8,
-        "selectedBy": 9.5,
-        "netTransfers": -96095,
-        "transfersIn": 7583,
-        "transfersOut": 103678,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 503,
-        "name": "Van de Ven",
-        "team": "TOT",
-        "position": "DEF",
-        "price": 5,
-        "selectedBy": 4.5,
-        "netTransfers": -92570,
-        "transfersIn": 1663,
-        "transfersOut": 94233,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 208,
-        "name": "Sarr",
-        "team": "CRY",
-        "position": "MID",
-        "price": 6.5,
-        "selectedBy": 3.6,
-        "netTransfers": -86245,
-        "transfersIn": 1814,
-        "transfersOut": 88059,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 426,
-        "name": "B.Fernandes",
+        "id": 427,
+        "name": "Mbeumo",
         "team": "MUN",
         "position": "MID",
-        "price": 12,
-        "selectedBy": 50,
-        "netTransfers": -83314,
-        "transfersIn": 20158,
-        "transfersOut": 103472,
+        "price": 8,
+        "selectedBy": 31.2,
+        "netTransfers": -345377,
+        "transfersIn": 44986,
+        "transfersOut": 390363,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "falling"
       },
       {
-        "id": 481,
-        "name": "Anderson",
+        "id": 397,
+        "name": "Semenyo",
         "team": "MCI",
         "position": "MID",
-        "price": 6.5,
-        "selectedBy": 7,
-        "netTransfers": -74307,
-        "transfersIn": 5305,
-        "transfersOut": 79612,
+        "price": 8.5,
+        "selectedBy": 21.4,
+        "netTransfers": -196085,
+        "transfersIn": 30403,
+        "transfersOut": 226488,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "falling"
       },
       {
-        "id": 452,
-        "name": "Bruno G.",
+        "id": 557,
+        "name": "Tzolis",
         "team": "ARS",
         "position": "MID",
-        "price": 7,
-        "selectedBy": 3.4,
-        "netTransfers": -67807,
-        "transfersIn": 496,
-        "transfersOut": 68303,
+        "price": 6.5,
+        "selectedBy": 23.6,
+        "netTransfers": -166793,
+        "transfersIn": 71538,
+        "transfersOut": 238331,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 552,
+        "name": "Brobbey",
+        "team": "SUN",
+        "position": "FWD",
+        "price": 6,
+        "selectedBy": 10.7,
+        "netTransfers": -162128,
+        "transfersIn": 14275,
+        "transfersOut": 176403,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 4,
+        "name": "Gabriel",
+        "team": "ARS",
+        "position": "DEF",
+        "price": 8,
+        "selectedBy": 27.2,
+        "netTransfers": -140696,
+        "transfersIn": 25749,
+        "transfersOut": 166445,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 106,
+        "name": "Thiago",
+        "team": "BRE",
+        "position": "FWD",
+        "price": 8,
+        "selectedBy": 14.8,
+        "netTransfers": -138036,
+        "transfersIn": 29078,
+        "transfersOut": 167114,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 423,
+        "name": "Shaw",
+        "team": "MUN",
+        "position": "DEF",
+        "price": 4.5,
+        "selectedBy": 17.5,
+        "netTransfers": -137078,
+        "transfersIn": 16952,
+        "transfersOut": 154030,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 356,
+        "name": "Virgil",
+        "team": "LIV",
+        "position": "DEF",
+        "price": 6.5,
+        "selectedBy": 18.3,
+        "netTransfers": -117727,
+        "transfersIn": 32239,
+        "transfersOut": 149966,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 496,
+        "name": "Kinsky",
+        "team": "TOT",
+        "position": "GKP",
+        "price": 4.5,
+        "selectedBy": 20.8,
+        "netTransfers": -113253,
+        "transfersIn": 22854,
+        "transfersOut": 136107,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 387,
+        "name": "O'Reilly",
+        "team": "MCI",
+        "position": "DEF",
+        "price": 6.5,
+        "selectedBy": 19.5,
+        "netTransfers": -112467,
+        "transfersIn": 42882,
+        "transfersOut": 155349,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "falling"
@@ -1043,58 +1280,31 @@
       "price": 6,
       "hasPhoto": true
     },
+    "4": {
+      "name": "Gabriel",
+      "code": 226597,
+      "teamShort": "ARS",
+      "teamCode": 3,
+      "position": "DEF",
+      "price": 8,
+      "hasPhoto": true
+    },
     "8": {
       "name": "Calafiori",
       "code": 466075,
       "teamShort": "ARS",
       "teamCode": 3,
       "position": "DEF",
-      "price": 5.5,
+      "price": 5.6,
       "hasPhoto": true
     },
-    "15": {
-      "name": "Ødegaard",
-      "code": 184029,
-      "teamShort": "ARS",
-      "teamCode": 3,
+    "40": {
+      "name": "Rogers",
+      "code": 244850,
+      "teamShort": "CHE",
+      "teamCode": 8,
       "position": "MID",
-      "price": 6.5,
-      "hasPhoto": true
-    },
-    "25": {
-      "name": "Gyökeres",
-      "code": 224117,
-      "teamShort": "ARS",
-      "teamCode": 3,
-      "position": "FWD",
       "price": 7.5,
-      "hasPhoto": false
-    },
-    "26": {
-      "name": "Havertz",
-      "code": 219847,
-      "teamShort": "ARS",
-      "teamCode": 3,
-      "position": "FWD",
-      "price": 7.5,
-      "hasPhoto": true
-    },
-    "31": {
-      "name": "Konsa",
-      "code": 199798,
-      "teamShort": "ARS",
-      "teamCode": 3,
-      "position": "DEF",
-      "price": 4.5,
-      "hasPhoto": true
-    },
-    "55": {
-      "name": "Watkins",
-      "code": 178301,
-      "teamShort": "AVL",
-      "teamCode": 7,
-      "position": "FWD",
-      "price": 8,
       "hasPhoto": true
     },
     "69": {
@@ -1106,13 +1316,22 @@
       "price": 6,
       "hasPhoto": true
     },
-    "88": {
-      "name": "Kayode",
-      "code": 607464,
+    "82": {
+      "name": "Kelleher",
+      "code": 200720,
       "teamShort": "BRE",
       "teamCode": 94,
-      "position": "DEF",
-      "price": 4.5,
+      "position": "GKP",
+      "price": 5,
+      "hasPhoto": true
+    },
+    "106": {
+      "name": "Thiago",
+      "code": 502500,
+      "teamShort": "BRE",
+      "teamCode": 94,
+      "position": "FWD",
+      "price": 8,
       "hasPhoto": true
     },
     "113": {
@@ -1121,7 +1340,7 @@
       "teamShort": "BHA",
       "teamCode": 36,
       "position": "DEF",
-      "price": 4.5,
+      "price": 4.4,
       "hasPhoto": true
     },
     "115": {
@@ -1130,16 +1349,25 @@
       "teamShort": "BHA",
       "teamCode": 36,
       "position": "DEF",
-      "price": 4.5,
+      "price": 4.7,
       "hasPhoto": false
     },
-    "154": {
-      "name": "Palmer",
-      "code": 244851,
-      "teamShort": "CHE",
-      "teamCode": 8,
+    "123": {
+      "name": "Hinshelwood",
+      "code": 532529,
+      "teamShort": "BHA",
+      "teamCode": 36,
       "position": "MID",
-      "price": 9.5,
+      "price": 6,
+      "hasPhoto": true
+    },
+    "124": {
+      "name": "Groß",
+      "code": 60307,
+      "teamShort": "BHA",
+      "teamCode": 36,
+      "position": "MID",
+      "price": 5.5,
       "hasPhoto": true
     },
     "165": {
@@ -1148,16 +1376,25 @@
       "teamShort": "CHE",
       "teamCode": 8,
       "position": "FWD",
-      "price": 7.5,
+      "price": 7.6,
       "hasPhoto": true
     },
-    "208": {
-      "name": "Sarr",
-      "code": 232185,
+    "224": {
+      "name": "Nketiah",
+      "code": 205533,
       "teamShort": "CRY",
       "teamCode": 31,
-      "position": "MID",
-      "price": 6.5,
+      "position": "FWD",
+      "price": 5.5,
+      "hasPhoto": true
+    },
+    "229": {
+      "name": "Tarkowski",
+      "code": 17761,
+      "teamShort": "EVE",
+      "teamCode": 11,
+      "position": "DEF",
+      "price": 6,
       "hasPhoto": true
     },
     "237": {
@@ -1187,6 +1424,42 @@
       "price": 4.5,
       "hasPhoto": true
     },
+    "268": {
+      "name": "King",
+      "code": 577725,
+      "teamShort": "FUL",
+      "teamCode": 54,
+      "position": "MID",
+      "price": 5.5,
+      "hasPhoto": true
+    },
+    "277": {
+      "name": "Egan",
+      "code": 108416,
+      "teamShort": "HUL",
+      "teamCode": 88,
+      "position": "DEF",
+      "price": 4,
+      "hasPhoto": true
+    },
+    "279": {
+      "name": "Ajayi",
+      "code": 146426,
+      "teamShort": "HUL",
+      "teamCode": 88,
+      "position": "DEF",
+      "price": 4.1,
+      "hasPhoto": true
+    },
+    "316": {
+      "name": "Emersonn",
+      "code": 543968,
+      "teamShort": "IPS",
+      "teamCode": 40,
+      "position": "FWD",
+      "price": 5.5,
+      "hasPhoto": false
+    },
     "332": {
       "name": "Justin",
       "code": 220627,
@@ -1195,6 +1468,15 @@
       "position": "DEF",
       "price": 4.5,
       "hasPhoto": true
+    },
+    "356": {
+      "name": "Virgil",
+      "code": 97032,
+      "teamShort": "LIV",
+      "teamCode": 14,
+      "position": "DEF",
+      "price": 6.5,
+      "hasPhoto": false
     },
     "368": {
       "name": "Szoboszlai",
@@ -1205,13 +1487,40 @@
       "price": 7,
       "hasPhoto": false
     },
-    "391": {
-      "name": "Gvardiol",
-      "code": 477424,
+    "379": {
+      "name": "Isak",
+      "code": 219168,
+      "teamShort": "LIV",
+      "teamCode": 14,
+      "position": "FWD",
+      "price": 9,
+      "hasPhoto": true
+    },
+    "387": {
+      "name": "O'Reilly",
+      "code": 472769,
       "teamShort": "MCI",
       "teamCode": 43,
       "position": "DEF",
-      "price": 5.5,
+      "price": 6.5,
+      "hasPhoto": true
+    },
+    "388": {
+      "name": "Guéhi",
+      "code": 209036,
+      "teamShort": "MCI",
+      "teamCode": 43,
+      "position": "DEF",
+      "price": 6,
+      "hasPhoto": true
+    },
+    "397": {
+      "name": "Semenyo",
+      "code": 437730,
+      "teamShort": "MCI",
+      "teamCode": 43,
+      "position": "MID",
+      "price": 8.5,
       "hasPhoto": true
     },
     "411": {
@@ -1232,6 +1541,15 @@
       "price": 5,
       "hasPhoto": true
     },
+    "423": {
+      "name": "Shaw",
+      "code": 106760,
+      "teamShort": "MUN",
+      "teamCode": 1,
+      "position": "DEF",
+      "price": 4.5,
+      "hasPhoto": true
+    },
     "426": {
       "name": "B.Fernandes",
       "code": 141746,
@@ -1241,49 +1559,31 @@
       "price": 12,
       "hasPhoto": true
     },
-    "452": {
-      "name": "Bruno G.",
-      "code": 208706,
-      "teamShort": "ARS",
-      "teamCode": 3,
-      "position": "MID",
-      "price": 7,
-      "hasPhoto": true
-    },
-    "480": {
-      "name": "Gibbs-White",
-      "code": 222531,
-      "teamShort": "NFO",
-      "teamCode": 17,
+    "427": {
+      "name": "Mbeumo",
+      "code": 446008,
+      "teamShort": "MUN",
+      "teamCode": 1,
       "position": "MID",
       "price": 8,
       "hasPhoto": true
     },
-    "481": {
-      "name": "Anderson",
-      "code": 215379,
-      "teamShort": "MCI",
-      "teamCode": 43,
-      "position": "MID",
-      "price": 6.5,
-      "hasPhoto": true
-    },
-    "499": {
-      "name": "Pedro Porro",
-      "code": 441164,
-      "teamShort": "TOT",
-      "teamCode": 6,
-      "position": "DEF",
-      "price": 5.5,
-      "hasPhoto": true
-    },
-    "503": {
-      "name": "Van de Ven",
-      "code": 491279,
-      "teamShort": "TOT",
-      "teamCode": 6,
+    "449": {
+      "name": "Hall",
+      "code": 487838,
+      "teamShort": "NEW",
+      "teamCode": 4,
       "position": "DEF",
       "price": 5,
+      "hasPhoto": true
+    },
+    "496": {
+      "name": "Kinsky",
+      "code": 485055,
+      "teamShort": "TOT",
+      "teamCode": 6,
+      "position": "GKP",
+      "price": 4.5,
       "hasPhoto": true
     },
     "536": {
@@ -1295,12 +1595,12 @@
       "price": 4.5,
       "hasPhoto": false
     },
-    "542": {
-      "name": "E.Le Fée",
-      "code": 484420,
+    "552": {
+      "name": "Brobbey",
+      "code": 441264,
       "teamShort": "SUN",
       "teamCode": 56,
-      "position": "MID",
+      "position": "FWD",
       "price": 6,
       "hasPhoto": false
     },
@@ -1328,7 +1628,25 @@
       "teamShort": "BRE",
       "teamCode": 94,
       "position": "MID",
-      "price": 5.5,
+      "price": 5.6,
+      "hasPhoto": false
+    },
+    "572": {
+      "name": "Tzolakis",
+      "code": 473284,
+      "teamShort": "HUL",
+      "teamCode": 88,
+      "position": "GKP",
+      "price": 4.5,
+      "hasPhoto": false
+    },
+    "593": {
+      "name": "Dedić",
+      "code": 463726,
+      "teamShort": "NEW",
+      "teamCode": 4,
+      "position": "DEF",
+      "price": 4.5,
       "hasPhoto": false
     }
   }
