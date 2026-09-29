@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-22T12:14:44.917Z",
+    "generatedAt": "2026-09-29T13:36:58.622Z",
     "dataSource": "Official FPL API (public)",
     "season": "2026/27",
     "seasonState": "in_season",
@@ -19,7 +19,7 @@
     "id": "1899953",
     "name": "Sfundo Dludla",
     "teamName": "Izinyosi",
-    "overallRank": 3203046,
+    "overallRank": 3202852,
     "totalPoints": 314,
     "lastGwPoints": 40,
     "squadValue": 100.4,
@@ -58,8 +58,8 @@
         "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 2.8,
-        "projection": 5.22
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 5.1
       },
       {
         "id": 417,
@@ -78,8 +78,8 @@
         "minutesReliability": 0.8,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 2.28
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 2.4
       },
       {
         "id": 233,
@@ -91,7 +91,7 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 5.2,
+        "form": 5.7,
         "seasonPoints": 27,
         "recentMeanPoints": 5.4,
         "xgiPer90": 0.04,
@@ -111,15 +111,15 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 4,
+        "form": 4.7,
         "seasonPoints": 26,
         "recentMeanPoints": 5.2,
         "xgiPer90": 0.13,
         "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.6,
-        "projection": 4.52
+        "nextFixturesAvgDifficulty": 3.4,
+        "projection": 4.64
       },
       {
         "id": 254,
@@ -131,7 +131,7 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 2.4,
+        "form": 3,
         "seasonPoints": 12,
         "recentMeanPoints": 2.4,
         "xgiPer90": 0.12,
@@ -158,8 +158,8 @@
         "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 6.66
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 6.78
       },
       {
         "id": 15,
@@ -178,8 +178,8 @@
         "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 2.8,
-        "projection": 6.24
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 6.12
       },
       {
         "id": 40,
@@ -191,15 +191,15 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 5.8,
+        "form": 5.3,
         "seasonPoints": 29,
         "recentMeanPoints": 5.8,
         "xgiPer90": 0.61,
         "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 6.08
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 6.2
       },
       {
         "id": 69,
@@ -211,15 +211,15 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 6,
+        "form": 5.3,
         "seasonPoints": 30,
         "recentMeanPoints": 6,
         "xgiPer90": 0.21,
         "minutesReliability": 1,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 2.8,
-        "projection": 5.64
+        "nextFixturesAvgDifficulty": 3.2,
+        "projection": 5.4
       },
       {
         "id": 268,
@@ -231,7 +231,7 @@
         "isVice": false,
         "multiplier": 1,
         "onBench": false,
-        "form": 4.8,
+        "form": 5,
         "seasonPoints": 24,
         "recentMeanPoints": 4.8,
         "xgiPer90": 0.42,
@@ -251,7 +251,7 @@
         "isVice": false,
         "multiplier": 2,
         "onBench": false,
-        "form": 7.8,
+        "form": 8,
         "seasonPoints": 39,
         "recentMeanPoints": 7.8,
         "xgiPer90": 0.99,
@@ -271,7 +271,7 @@
         "isVice": false,
         "multiplier": 0,
         "onBench": true,
-        "form": 3.6,
+        "form": 4.3,
         "seasonPoints": 18,
         "recentMeanPoints": 3.6,
         "xgiPer90": 0,
@@ -291,15 +291,15 @@
         "isVice": true,
         "multiplier": 0,
         "onBench": true,
-        "form": 6.6,
+        "form": 4.3,
         "seasonPoints": 33,
         "recentMeanPoints": 6.6,
         "xgiPer90": 0.59,
         "minutesReliability": 0.8,
         "status": "d",
         "chanceNextRound": 75,
-        "nextFixturesAvgDifficulty": 3.2,
-        "projection": 6.22
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 6.34
       },
       {
         "id": 113,
@@ -311,15 +311,15 @@
         "isVice": false,
         "multiplier": 0,
         "onBench": true,
-        "form": 2.6,
+        "form": 4.3,
         "seasonPoints": 13,
         "recentMeanPoints": 2.6,
         "xgiPer90": 0.07,
         "minutesReliability": 0.8,
         "status": "a",
         "chanceNextRound": 100,
-        "nextFixturesAvgDifficulty": 3.6,
-        "projection": 2.54
+        "nextFixturesAvgDifficulty": 3.4,
+        "projection": 2.66
       },
       {
         "id": 553,
@@ -331,15 +331,15 @@
         "isVice": false,
         "multiplier": 0,
         "onBench": true,
-        "form": 3.5,
+        "form": 2,
         "seasonPoints": 15,
         "recentMeanPoints": 3,
         "xgiPer90": 1.15,
         "minutesReliability": 0,
         "status": "a",
         "chanceNextRound": null,
-        "nextFixturesAvgDifficulty": 2.6,
-        "projection": 4.34
+        "nextFixturesAvgDifficulty": 3,
+        "projection": 4.1
       }
     ],
     "upgradeSuggestions": [
@@ -349,7 +349,7 @@
           "name": "Dalot",
           "position": "DEF",
           "price": 4.9,
-          "projection": 2.28
+          "projection": 2.4
         },
         "in": [
           {
@@ -360,21 +360,21 @@
             "projection": 5.32
           },
           {
-            "id": 233,
-            "name": "Mykolenko",
-            "team": "EVE",
-            "price": 4.6,
-            "projection": 4.7
-          },
-          {
             "id": 112,
             "name": "Van Hecke",
             "team": "TOT",
             "price": 4.9,
-            "projection": 4.7
+            "projection": 4.82
+          },
+          {
+            "id": 334,
+            "name": "Muharemović",
+            "team": "LEE",
+            "price": 5,
+            "projection": 4.72
           }
         ],
-        "projectionDelta": 3.04
+        "projectionDelta": 2.92
       },
       {
         "out": {
@@ -382,7 +382,7 @@
           "name": "F.Kadıoğlu",
           "position": "DEF",
           "price": 4.4,
-          "projection": 2.54
+          "projection": 2.66
         },
         "in": [
           {
@@ -397,7 +397,7 @@
             "name": "Justin",
             "team": "LEE",
             "price": 4.5,
-            "projection": 4.52
+            "projection": 4.64
           },
           {
             "id": 87,
@@ -407,7 +407,7 @@
             "projection": 3.98
           }
         ],
-        "projectionDelta": 2.78
+        "projectionDelta": 2.66
       },
       {
         "out": {
@@ -415,7 +415,7 @@
           "name": "Scott",
           "position": "MID",
           "price": 6.1,
-          "projection": 5.64
+          "projection": 5.4
         },
         "in": [
           {
@@ -423,10 +423,29 @@
             "name": "Groß",
             "team": "BHA",
             "price": 5.8,
-            "projection": 7.84
+            "projection": 7.96
           }
         ],
-        "projectionDelta": 2.2
+        "projectionDelta": 2.56
+      },
+      {
+        "out": {
+          "id": 15,
+          "name": "Ødegaard",
+          "position": "MID",
+          "price": 6.8,
+          "projection": 6.12
+        },
+        "in": [
+          {
+            "id": 124,
+            "name": "Groß",
+            "team": "BHA",
+            "price": 5.8,
+            "projection": 7.96
+          }
+        ],
+        "projectionDelta": 1.84
       },
       {
         "out": {
@@ -456,7 +475,7 @@
             "name": "Justin",
             "team": "LEE",
             "price": 4.5,
-            "projection": 4.52
+            "projection": 4.64
           }
         ],
         "projectionDelta": 1.78
@@ -467,7 +486,7 @@
           "name": "Rogers",
           "position": "MID",
           "price": 7.7,
-          "projection": 6.08
+          "projection": 6.2
         },
         "in": [
           {
@@ -475,48 +494,10 @@
             "name": "Groß",
             "team": "BHA",
             "price": 5.8,
-            "projection": 7.84
+            "projection": 7.96
           }
         ],
         "projectionDelta": 1.76
-      },
-      {
-        "out": {
-          "id": 15,
-          "name": "Ødegaard",
-          "position": "MID",
-          "price": 6.8,
-          "projection": 6.24
-        },
-        "in": [
-          {
-            "id": 124,
-            "name": "Groß",
-            "team": "BHA",
-            "price": 5.8,
-            "projection": 7.84
-          }
-        ],
-        "projectionDelta": 1.6
-      },
-      {
-        "out": {
-          "id": 250,
-          "name": "Leno",
-          "position": "GKP",
-          "price": 4.5,
-          "projection": 4.02
-        },
-        "in": [
-          {
-            "id": 572,
-            "name": "Tzolakis",
-            "team": "HUL",
-            "price": 4.6,
-            "projection": 5.46
-          }
-        ],
-        "projectionDelta": 1.44
       },
       {
         "out": {
@@ -524,7 +505,7 @@
           "name": "B.Fernandes",
           "position": "MID",
           "price": 11.9,
-          "projection": 6.66
+          "projection": 6.78
         },
         "in": [
           {
@@ -532,10 +513,29 @@
             "name": "Groß",
             "team": "BHA",
             "price": 5.8,
-            "projection": 7.84
+            "projection": 7.96
           }
         ],
         "projectionDelta": 1.18
+      },
+      {
+        "out": {
+          "id": 332,
+          "name": "Justin",
+          "position": "DEF",
+          "price": 4.5,
+          "projection": 4.64
+        },
+        "in": [
+          {
+            "id": 305,
+            "name": "Davis",
+            "team": "IPS",
+            "price": 4,
+            "projection": 5.32
+          }
+        ],
+        "projectionDelta": 0.68
       }
     ]
   },
@@ -790,7 +790,7 @@
       "price": 15.6,
       "seasonPoints": 39,
       "pointsPerGame": 7.8,
-      "selectedBy": 73.6,
+      "selectedBy": 73.8,
       "windowGws": 5,
       "meanPoints": 7.8,
       "cv": 0.47,
@@ -810,7 +810,7 @@
       "price": 5.8,
       "seasonPoints": 47,
       "pointsPerGame": 9.4,
-      "selectedBy": 27.4,
+      "selectedBy": 28.8,
       "windowGws": 5,
       "meanPoints": 9.4,
       "cv": 0.7,
@@ -830,7 +830,7 @@
       "price": 6.1,
       "seasonPoints": 43,
       "pointsPerGame": 8.6,
-      "selectedBy": 15.7,
+      "selectedBy": 16.4,
       "windowGws": 5,
       "meanPoints": 8.6,
       "cv": 0.46,
@@ -847,10 +847,10 @@
       "name": "Tzolakis",
       "team": "HUL",
       "position": "GKP",
-      "price": 4.6,
+      "price": 4.7,
       "seasonPoints": 34,
       "pointsPerGame": 6.8,
-      "selectedBy": 12.3,
+      "selectedBy": 12.8,
       "windowGws": 5,
       "meanPoints": 6.8,
       "cv": 0.44,
@@ -870,7 +870,7 @@
       "price": 6,
       "seasonPoints": 30,
       "pointsPerGame": 6,
-      "selectedBy": 18.3,
+      "selectedBy": 18.2,
       "windowGws": 5,
       "meanPoints": 6,
       "cv": 0.47,
@@ -910,7 +910,7 @@
       "price": 11.9,
       "seasonPoints": 31,
       "pointsPerGame": 6.2,
-      "selectedBy": 38.8,
+      "selectedBy": 38.5,
       "windowGws": 5,
       "meanPoints": 6.2,
       "cv": 1.35,
@@ -950,7 +950,7 @@
       "price": 7.9,
       "seasonPoints": 25,
       "pointsPerGame": 5,
-      "selectedBy": 20.8,
+      "selectedBy": 20.6,
       "windowGws": 5,
       "meanPoints": 5,
       "cv": 0.76,
@@ -1050,7 +1050,7 @@
       "price": 6.1,
       "seasonPoints": 28,
       "pointsPerGame": 5.6,
-      "selectedBy": 5.4,
+      "selectedBy": 5.6,
       "windowGws": 5,
       "meanPoints": 5.6,
       "cv": 0.74,
@@ -1117,13 +1117,13 @@
             "gw": 9,
             "opp": "AVL",
             "venue": "A",
-            "difficulty": 4
+            "difficulty": 3
           },
           {
             "gw": 10,
             "opp": "NEW",
             "venue": "H",
-            "difficulty": 2
+            "difficulty": 3
           }
         ]
       },
@@ -1131,14 +1131,14 @@
         "team": "COV",
         "teamId": 7,
         "count": 5,
-        "avgDifficulty": 2.4,
+        "avgDifficulty": 2.8,
         "doubleGws": [],
         "fixtures": [
           {
             "gw": 6,
             "opp": "NEW",
             "venue": "H",
-            "difficulty": 2
+            "difficulty": 3
           },
           {
             "gw": 7,
@@ -1156,130 +1156,13 @@
             "gw": 9,
             "opp": "SUN",
             "venue": "H",
-            "difficulty": 2
+            "difficulty": 3
           },
           {
             "gw": 10,
             "opp": "EVE",
             "venue": "A",
             "difficulty": 3
-          }
-        ]
-      },
-      {
-        "team": "SUN",
-        "teamId": 20,
-        "count": 5,
-        "avgDifficulty": 2.6,
-        "doubleGws": [],
-        "fixtures": [
-          {
-            "gw": 6,
-            "opp": "BHA",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 7,
-            "opp": "BOU",
-            "venue": "A",
-            "difficulty": 3
-          },
-          {
-            "gw": 8,
-            "opp": "LEE",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 9,
-            "opp": "COV",
-            "venue": "A",
-            "difficulty": 2
-          },
-          {
-            "gw": 10,
-            "opp": "CHE",
-            "venue": "H",
-            "difficulty": 4
-          }
-        ]
-      },
-      {
-        "team": "ARS",
-        "teamId": 1,
-        "count": 5,
-        "avgDifficulty": 2.8,
-        "doubleGws": [],
-        "fixtures": [
-          {
-            "gw": 6,
-            "opp": "LEE",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 7,
-            "opp": "NFO",
-            "venue": "A",
-            "difficulty": 3
-          },
-          {
-            "gw": 8,
-            "opp": "EVE",
-            "venue": "H",
-            "difficulty": 3
-          },
-          {
-            "gw": 9,
-            "opp": "LIV",
-            "venue": "A",
-            "difficulty": 4
-          },
-          {
-            "gw": 10,
-            "opp": "HUL",
-            "venue": "H",
-            "difficulty": 2
-          }
-        ]
-      },
-      {
-        "team": "BOU",
-        "teamId": 3,
-        "count": 5,
-        "avgDifficulty": 2.8,
-        "doubleGws": [],
-        "fixtures": [
-          {
-            "gw": 6,
-            "opp": "CHE",
-            "venue": "A",
-            "difficulty": 4
-          },
-          {
-            "gw": 7,
-            "opp": "SUN",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 8,
-            "opp": "MUN",
-            "venue": "A",
-            "difficulty": 4
-          },
-          {
-            "gw": 9,
-            "opp": "LEE",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 10,
-            "opp": "IPS",
-            "venue": "A",
-            "difficulty": 2
           }
         ]
       },
@@ -1321,6 +1204,123 @@
             "difficulty": 3
           }
         ]
+      },
+      {
+        "team": "ARS",
+        "teamId": 1,
+        "count": 5,
+        "avgDifficulty": 3,
+        "doubleGws": [],
+        "fixtures": [
+          {
+            "gw": 6,
+            "opp": "LEE",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 7,
+            "opp": "NFO",
+            "venue": "A",
+            "difficulty": 3
+          },
+          {
+            "gw": 8,
+            "opp": "EVE",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 9,
+            "opp": "LIV",
+            "venue": "A",
+            "difficulty": 4
+          },
+          {
+            "gw": 10,
+            "opp": "HUL",
+            "venue": "H",
+            "difficulty": 2
+          }
+        ]
+      },
+      {
+        "team": "CHE",
+        "teamId": 6,
+        "count": 5,
+        "avgDifficulty": 3,
+        "doubleGws": [],
+        "fixtures": [
+          {
+            "gw": 6,
+            "opp": "BOU",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 7,
+            "opp": "EVE",
+            "venue": "A",
+            "difficulty": 3
+          },
+          {
+            "gw": 8,
+            "opp": "TOT",
+            "venue": "H",
+            "difficulty": 2
+          },
+          {
+            "gw": 9,
+            "opp": "MUN",
+            "venue": "H",
+            "difficulty": 4
+          },
+          {
+            "gw": 10,
+            "opp": "SUN",
+            "venue": "A",
+            "difficulty": 3
+          }
+        ]
+      },
+      {
+        "team": "IPS",
+        "teamId": 12,
+        "count": 5,
+        "avgDifficulty": 3,
+        "doubleGws": [],
+        "fixtures": [
+          {
+            "gw": 6,
+            "opp": "FUL",
+            "venue": "H",
+            "difficulty": 2
+          },
+          {
+            "gw": 7,
+            "opp": "MCI",
+            "venue": "A",
+            "difficulty": 5
+          },
+          {
+            "gw": 8,
+            "opp": "NFO",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 9,
+            "opp": "HUL",
+            "venue": "A",
+            "difficulty": 2
+          },
+          {
+            "gw": 10,
+            "opp": "BOU",
+            "venue": "H",
+            "difficulty": 3
+          }
+        ]
       }
     ],
     "worstRuns": [
@@ -1328,7 +1328,7 @@
         "team": "LEE",
         "teamId": 13,
         "count": 5,
-        "avgDifficulty": 3.6,
+        "avgDifficulty": 3.4,
         "doubleGws": [],
         "fixtures": [
           {
@@ -1359,7 +1359,7 @@
             "gw": 10,
             "opp": "TOT",
             "venue": "H",
-            "difficulty": 3
+            "difficulty": 2
           }
         ]
       },
@@ -1367,7 +1367,7 @@
         "team": "BHA",
         "teamId": 5,
         "count": 5,
-        "avgDifficulty": 3.6,
+        "avgDifficulty": 3.4,
         "doubleGws": [],
         "fixtures": [
           {
@@ -1380,7 +1380,7 @@
             "gw": 7,
             "opp": "CRY",
             "venue": "H",
-            "difficulty": 3
+            "difficulty": 2
           },
           {
             "gw": 8,
@@ -1403,78 +1403,78 @@
         ]
       },
       {
-        "team": "AVL",
-        "teamId": 2,
+        "team": "CRY",
+        "teamId": 8,
         "count": 5,
-        "avgDifficulty": 3.2,
+        "avgDifficulty": 3.4,
         "doubleGws": [],
         "fixtures": [
           {
             "gw": 6,
-            "opp": "BRE",
-            "venue": "H",
-            "difficulty": 3
-          },
-          {
-            "gw": 7,
-            "opp": "NEW",
-            "venue": "A",
-            "difficulty": 3
-          },
-          {
-            "gw": 8,
-            "opp": "MCI",
-            "venue": "H",
-            "difficulty": 4
-          },
-          {
-            "gw": 9,
-            "opp": "FUL",
-            "venue": "H",
-            "difficulty": 2
-          },
-          {
-            "gw": 10,
-            "opp": "MUN",
-            "venue": "A",
-            "difficulty": 4
-          }
-        ]
-      },
-      {
-        "team": "BRE",
-        "teamId": 4,
-        "count": 5,
-        "avgDifficulty": 3.2,
-        "doubleGws": [],
-        "fixtures": [
-          {
-            "gw": 6,
-            "opp": "AVL",
-            "venue": "A",
-            "difficulty": 4
-          },
-          {
-            "gw": 7,
-            "opp": "LIV",
-            "venue": "H",
-            "difficulty": 4
-          },
-          {
-            "gw": 8,
-            "opp": "HUL",
-            "venue": "A",
-            "difficulty": 2
-          },
-          {
-            "gw": 9,
             "opp": "NFO",
             "venue": "H",
             "difficulty": 3
           },
           {
-            "gw": 10,
+            "gw": 7,
             "opp": "BHA",
+            "venue": "A",
+            "difficulty": 4
+          },
+          {
+            "gw": 8,
+            "opp": "NEW",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 9,
+            "opp": "TOT",
+            "venue": "A",
+            "difficulty": 3
+          },
+          {
+            "gw": 10,
+            "opp": "LIV",
+            "venue": "H",
+            "difficulty": 4
+          }
+        ]
+      },
+      {
+        "team": "LIV",
+        "teamId": 14,
+        "count": 5,
+        "avgDifficulty": 3.4,
+        "doubleGws": [],
+        "fixtures": [
+          {
+            "gw": 6,
+            "opp": "MCI",
+            "venue": "H",
+            "difficulty": 4
+          },
+          {
+            "gw": 7,
+            "opp": "BRE",
+            "venue": "A",
+            "difficulty": 3
+          },
+          {
+            "gw": 8,
+            "opp": "BHA",
+            "venue": "H",
+            "difficulty": 3
+          },
+          {
+            "gw": 9,
+            "opp": "ARS",
+            "venue": "H",
+            "difficulty": 4
+          },
+          {
+            "gw": 10,
+            "opp": "CRY",
             "venue": "A",
             "difficulty": 3
           }
@@ -1502,10 +1502,10 @@
         "name": "Tzolakis",
         "team": "HUL",
         "position": "GKP",
-        "price": 4.6,
+        "price": 4.7,
         "seasonPoints": 34,
         "xgi": 0,
-        "pointsPerM": 7.39,
+        "pointsPerM": 7.23,
         "xgiPerM": 0
       },
       {
@@ -1714,29 +1714,15 @@
     "note": "Momentum approximation from public net transfers — directional, not the exact FPL threshold. Prices change ~01:30 UK daily.",
     "risers": [
       {
-        "id": 115,
-        "name": "De Cuyper",
-        "team": "BHA",
-        "position": "DEF",
-        "price": 4.9,
-        "selectedBy": 27.1,
-        "netTransfers": 208475,
-        "transfersIn": 221615,
-        "transfersOut": 13140,
-        "costChangeEvent": 0,
-        "costChangeStart": 4,
-        "signal": "rising"
-      },
-      {
         "id": 229,
         "name": "Tarkowski",
         "team": "EVE",
         "position": "DEF",
         "price": 6.1,
-        "selectedBy": 15.7,
-        "netTransfers": 149782,
-        "transfersIn": 161552,
-        "transfersOut": 11770,
+        "selectedBy": 16.4,
+        "netTransfers": 198342,
+        "transfersIn": 217653,
+        "transfersOut": 19311,
         "costChangeEvent": 0,
         "costChangeStart": 1,
         "signal": "rising"
@@ -1747,26 +1733,12 @@
         "team": "SUN",
         "position": "FWD",
         "price": 5.7,
-        "selectedBy": 6.8,
-        "netTransfers": 136415,
-        "transfersIn": 157323,
-        "transfersOut": 20908,
+        "selectedBy": 7,
+        "netTransfers": 150726,
+        "transfersIn": 193261,
+        "transfersOut": 42535,
         "costChangeEvent": -1,
         "costChangeStart": -3,
-        "signal": "rising"
-      },
-      {
-        "id": 391,
-        "name": "Gvardiol",
-        "team": "MCI",
-        "position": "DEF",
-        "price": 5.7,
-        "selectedBy": 26.5,
-        "netTransfers": 74850,
-        "transfersIn": 110670,
-        "transfersOut": 35820,
-        "costChangeEvent": 0,
-        "costChangeStart": 2,
         "signal": "rising"
       },
       {
@@ -1775,40 +1747,26 @@
         "team": "LEE",
         "position": "DEF",
         "price": 4.6,
-        "selectedBy": 6.8,
-        "netTransfers": 73943,
-        "transfersIn": 90362,
-        "transfersOut": 16419,
+        "selectedBy": 7.1,
+        "netTransfers": 95718,
+        "transfersIn": 120074,
+        "transfersOut": 24356,
         "costChangeEvent": 0,
         "costChangeStart": 1,
         "signal": "rising"
       },
       {
-        "id": 572,
-        "name": "Tzolakis",
-        "team": "HUL",
-        "position": "GKP",
-        "price": 4.6,
-        "selectedBy": 12.3,
-        "netTransfers": 68716,
-        "transfersIn": 82673,
-        "transfersOut": 13957,
-        "costChangeEvent": 0,
-        "costChangeStart": 1,
-        "signal": "rising"
-      },
-      {
-        "id": 397,
-        "name": "Semenyo",
+        "id": 391,
+        "name": "Gvardiol",
         "team": "MCI",
-        "position": "MID",
-        "price": 8.4,
-        "selectedBy": 15.4,
-        "netTransfers": 62781,
-        "transfersIn": 96938,
-        "transfersOut": 34157,
+        "position": "DEF",
+        "price": 5.7,
+        "selectedBy": 26.8,
+        "netTransfers": 91400,
+        "transfersIn": 142806,
+        "transfersOut": 51406,
         "costChangeEvent": 0,
-        "costChangeStart": -1,
+        "costChangeStart": 2,
         "signal": "rising"
       },
       {
@@ -1817,10 +1775,10 @@
         "team": "CHE",
         "position": "MID",
         "price": 7.7,
-        "selectedBy": 40.3,
-        "netTransfers": 51072,
-        "transfersIn": 103501,
-        "transfersOut": 52429,
+        "selectedBy": 40.5,
+        "netTransfers": 73339,
+        "transfersIn": 141660,
+        "transfersOut": 68321,
         "costChangeEvent": 0,
         "costChangeStart": 2,
         "signal": "rising"
@@ -1831,10 +1789,38 @@
         "team": "FUL",
         "position": "MID",
         "price": 5.5,
-        "selectedBy": 2.4,
-        "netTransfers": 47998,
-        "transfersIn": 59661,
-        "transfersOut": 11663,
+        "selectedBy": 2.6,
+        "netTransfers": 65666,
+        "transfersIn": 82905,
+        "transfersOut": 17239,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "rising"
+      },
+      {
+        "id": 397,
+        "name": "Semenyo",
+        "team": "MCI",
+        "position": "MID",
+        "price": 8.4,
+        "selectedBy": 15.4,
+        "netTransfers": 62413,
+        "transfersIn": 123887,
+        "transfersOut": 61474,
+        "costChangeEvent": 0,
+        "costChangeStart": -1,
+        "signal": "rising"
+      },
+      {
+        "id": 12,
+        "name": "Saka",
+        "team": "ARS",
+        "position": "MID",
+        "price": 9.5,
+        "selectedBy": 13.7,
+        "netTransfers": 57964,
+        "transfersIn": 103743,
+        "transfersOut": 45779,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "rising"
@@ -1845,10 +1831,24 @@
         "team": "MCI",
         "position": "FWD",
         "price": 15.6,
-        "selectedBy": 73.6,
-        "netTransfers": 42472,
-        "transfersIn": 56074,
-        "transfersOut": 13602,
+        "selectedBy": 73.8,
+        "netTransfers": 56709,
+        "transfersIn": 75477,
+        "transfersOut": 18768,
+        "costChangeEvent": 0,
+        "costChangeStart": 1,
+        "signal": "rising"
+      },
+      {
+        "id": 286,
+        "name": "Belloumi",
+        "team": "HUL",
+        "position": "MID",
+        "price": 5.1,
+        "selectedBy": 5.1,
+        "netTransfers": 49869,
+        "transfersIn": 73672,
+        "transfersOut": 23803,
         "costChangeEvent": 0,
         "costChangeStart": 1,
         "signal": "rising"
@@ -1861,38 +1861,10 @@
         "team": "LIV",
         "position": "MID",
         "price": 7,
-        "selectedBy": 33.2,
-        "netTransfers": -139235,
-        "transfersIn": 25196,
-        "transfersOut": 164431,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
-        "signal": "falling"
-      },
-      {
-        "id": 427,
-        "name": "Mbeumo",
-        "team": "MUN",
-        "position": "MID",
-        "price": 7.9,
-        "selectedBy": 20.8,
-        "netTransfers": -76973,
-        "transfersIn": 23794,
-        "transfersOut": 100767,
-        "costChangeEvent": 0,
-        "costChangeStart": -1,
-        "signal": "falling"
-      },
-      {
-        "id": 496,
-        "name": "Kinsky",
-        "team": "TOT",
-        "position": "GKP",
-        "price": 4.5,
-        "selectedBy": 17.5,
-        "netTransfers": -74933,
-        "transfersIn": 11370,
-        "transfersOut": 86303,
+        "selectedBy": 32.8,
+        "netTransfers": -171020,
+        "transfersIn": 34405,
+        "transfersOut": 205425,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "falling"
@@ -1903,12 +1875,40 @@
         "team": "CHE",
         "position": "MID",
         "price": 9.7,
-        "selectedBy": 26.3,
-        "netTransfers": -66021,
-        "transfersIn": 38461,
-        "transfersOut": 104482,
+        "selectedBy": 25.7,
+        "netTransfers": -114180,
+        "transfersIn": 47004,
+        "transfersOut": 161184,
         "costChangeEvent": 0,
         "costChangeStart": 2,
+        "signal": "falling"
+      },
+      {
+        "id": 427,
+        "name": "Mbeumo",
+        "team": "MUN",
+        "position": "MID",
+        "price": 7.9,
+        "selectedBy": 20.6,
+        "netTransfers": -91553,
+        "transfersIn": 34745,
+        "transfersOut": 126298,
+        "costChangeEvent": 0,
+        "costChangeStart": -1,
+        "signal": "falling"
+      },
+      {
+        "id": 496,
+        "name": "Kinsky",
+        "team": "TOT",
+        "position": "GKP",
+        "price": 4.5,
+        "selectedBy": 17.3,
+        "netTransfers": -91199,
+        "transfersIn": 16980,
+        "transfersOut": 108179,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
         "signal": "falling"
       },
       {
@@ -1917,26 +1917,12 @@
         "team": "CHE",
         "position": "DEF",
         "price": 5.4,
-        "selectedBy": 6,
-        "netTransfers": -61210,
-        "transfersIn": 442,
-        "transfersOut": 61652,
+        "selectedBy": 5.8,
+        "netTransfers": -75360,
+        "transfersIn": 597,
+        "transfersOut": 75957,
         "costChangeEvent": 0,
         "costChangeStart": -1,
-        "signal": "falling"
-      },
-      {
-        "id": 175,
-        "name": "van Ewijk",
-        "team": "COV",
-        "position": "DEF",
-        "price": 4,
-        "selectedBy": 8.9,
-        "netTransfers": -57279,
-        "transfersIn": 991,
-        "transfersOut": 58270,
-        "costChangeEvent": 0,
-        "costChangeStart": 0,
         "signal": "falling"
       },
       {
@@ -1945,24 +1931,38 @@
         "team": "LEE",
         "position": "FWD",
         "price": 6,
-        "selectedBy": 25,
-        "netTransfers": -57147,
-        "transfersIn": 70199,
-        "transfersOut": 127346,
+        "selectedBy": 24.8,
+        "netTransfers": -74184,
+        "transfersIn": 90087,
+        "transfersOut": 164271,
         "costChangeEvent": 0,
         "costChangeStart": 0,
         "signal": "falling"
       },
       {
-        "id": 418,
-        "name": "Maguire",
-        "team": "MUN",
+        "id": 175,
+        "name": "van Ewijk",
+        "team": "COV",
         "position": "DEF",
-        "price": 4.9,
+        "price": 4,
         "selectedBy": 8.8,
-        "netTransfers": -56315,
-        "transfersIn": 2908,
-        "transfersOut": 59223,
+        "netTransfers": -72842,
+        "transfersIn": 1144,
+        "transfersOut": 73986,
+        "costChangeEvent": 0,
+        "costChangeStart": 0,
+        "signal": "falling"
+      },
+      {
+        "id": 13,
+        "name": "Rice",
+        "team": "ARS",
+        "position": "MID",
+        "price": 7.4,
+        "selectedBy": 11.7,
+        "netTransfers": -72663,
+        "transfersIn": 7487,
+        "transfersOut": 80150,
         "costChangeEvent": 0,
         "costChangeStart": -1,
         "signal": "falling"
@@ -1973,26 +1973,26 @@
         "team": "TOT",
         "position": "DEF",
         "price": 5.4,
-        "selectedBy": 7.8,
-        "netTransfers": -54566,
-        "transfersIn": 1459,
-        "transfersOut": 56025,
+        "selectedBy": 7.6,
+        "netTransfers": -70892,
+        "transfersIn": 1657,
+        "transfersOut": 72549,
         "costChangeEvent": 0,
         "costChangeStart": -1,
         "signal": "falling"
       },
       {
-        "id": 464,
-        "name": "Wissa",
-        "team": "NEW",
-        "position": "FWD",
-        "price": 6.2,
-        "selectedBy": 18.7,
-        "netTransfers": -49165,
-        "transfersIn": 62107,
-        "transfersOut": 111272,
+        "id": 10,
+        "name": "White",
+        "team": "ARS",
+        "position": "DEF",
+        "price": 5.5,
+        "selectedBy": 4.9,
+        "netTransfers": -62429,
+        "transfersIn": 3231,
+        "transfersOut": 65660,
         "costChangeEvent": 0,
-        "costChangeStart": 2,
+        "costChangeStart": 0,
         "signal": "falling"
       }
     ]
@@ -2007,6 +2007,15 @@
       "price": 6.1,
       "hasPhoto": true
     },
+    "10": {
+      "name": "White",
+      "code": 198869,
+      "teamShort": "ARS",
+      "teamCode": 3,
+      "position": "DEF",
+      "price": 5.5,
+      "hasPhoto": true
+    },
     "12": {
       "name": "Saka",
       "code": 223340,
@@ -2014,6 +2023,15 @@
       "teamCode": 3,
       "position": "MID",
       "price": 9.5,
+      "hasPhoto": true
+    },
+    "13": {
+      "name": "Rice",
+      "code": 204480,
+      "teamShort": "ARS",
+      "teamCode": 3,
+      "position": "MID",
+      "price": 7.4,
       "hasPhoto": true
     },
     "15": {
@@ -2114,15 +2132,6 @@
       "position": "DEF",
       "price": 4.4,
       "hasPhoto": true
-    },
-    "115": {
-      "name": "De Cuyper",
-      "code": 465730,
-      "teamShort": "BHA",
-      "teamCode": 36,
-      "position": "DEF",
-      "price": 4.9,
-      "hasPhoto": false
     },
     "124": {
       "name": "Groß",
@@ -2231,6 +2240,15 @@
       "position": "MID",
       "price": 5.5,
       "hasPhoto": true
+    },
+    "286": {
+      "name": "Belloumi",
+      "code": 540324,
+      "teamShort": "HUL",
+      "teamCode": 88,
+      "position": "MID",
+      "price": 5.1,
+      "hasPhoto": false
     },
     "305": {
       "name": "Davis",
@@ -2358,15 +2376,6 @@
       "price": 4.9,
       "hasPhoto": true
     },
-    "418": {
-      "name": "Maguire",
-      "code": 95658,
-      "teamShort": "MUN",
-      "teamCode": 1,
-      "position": "DEF",
-      "price": 4.9,
-      "hasPhoto": true
-    },
     "426": {
       "name": "B.Fernandes",
       "code": 141746,
@@ -2401,15 +2410,6 @@
       "teamCode": 4,
       "position": "MID",
       "price": 6.1,
-      "hasPhoto": true
-    },
-    "464": {
-      "name": "Wissa",
-      "code": 216646,
-      "teamShort": "NEW",
-      "teamCode": 4,
-      "position": "FWD",
-      "price": 6.2,
       "hasPhoto": true
     },
     "480": {
@@ -2481,7 +2481,7 @@
       "teamShort": "HUL",
       "teamCode": 88,
       "position": "GKP",
-      "price": 4.6,
+      "price": 4.7,
       "hasPhoto": false
     }
   }
